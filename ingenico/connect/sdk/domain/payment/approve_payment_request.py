@@ -14,7 +14,7 @@ class ApprovePaymentRequest(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_ApprovePaymentRequest
     
     Attributes:
-        amount:                                           int
+        amount:                                           long
         direct_debit_payment_method_specific_input:       :class:`ApprovePaymentNonSepaDirectDebitPaymentMethodSpecificInput`
         order:                                            :class:`OrderApprovePayment`
         sepa_direct_debit_payment_method_specific_input:  :class:`ApprovePaymentSepaDirectDebitPaymentMethodSpecificInput`

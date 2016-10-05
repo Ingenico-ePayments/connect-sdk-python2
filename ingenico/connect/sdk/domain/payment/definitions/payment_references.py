@@ -11,7 +11,7 @@ class PaymentReferences(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_PaymentReferences
     
     Attributes:
-        merchant_order_id:       int
+        merchant_order_id:       long
         merchant_reference:      str
         payment_reference:       str
         provider_id:             str

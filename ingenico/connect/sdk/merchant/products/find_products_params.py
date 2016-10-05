@@ -11,7 +11,7 @@ class FindProductsParams(ParamRequest):
     See also https://developer.globalcollect.com/documentation/api/server/#__merchantId__products_get
     
     Attributes:
-        amount:         int
+        amount:         long
         hide:           list[str]
         is_recurring:   bool
         country_code:   str

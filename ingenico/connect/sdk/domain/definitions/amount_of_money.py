@@ -11,7 +11,7 @@ class AmountOfMoney(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_AmountOfMoney
     
     Attributes:
-        amount:         int
+        amount:         long
         currency_code:  str
      """
 

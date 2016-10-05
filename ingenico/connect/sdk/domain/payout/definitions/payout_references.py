@@ -12,7 +12,7 @@ class PayoutReferences(DataObject):
     
     Attributes:
         invoice_number:      str
-        merchant_order_id:   int
+        merchant_order_id:   long
         merchant_reference:  str
      """
 

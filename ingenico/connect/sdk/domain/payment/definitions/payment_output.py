@@ -18,7 +18,7 @@ class PaymentOutput(OrderOutput):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_PaymentOutput
     
     Attributes:
-        amount_paid:                                       int
+        amount_paid:                                       long
         bank_transfer_payment_method_specific_output:      :class:`BankTransferPaymentMethodSpecificOutput`
         card_payment_method_specific_output:               :class:`CardPaymentMethodSpecificOutput`
         cash_payment_method_specific_output:               :class:`CashPaymentMethodSpecificOutput`

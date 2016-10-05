@@ -11,8 +11,8 @@ class RefundMethodSpecificOutput(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_RefundMethodSpecificOutput
     
     Attributes:
-        total_amount_paid:      int
-        total_amount_refunded:  int
+        total_amount_paid:      long
+        total_amount_refunded:  long
      """
 
     total_amount_paid = None

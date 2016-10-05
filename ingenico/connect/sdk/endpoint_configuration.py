@@ -133,6 +133,8 @@ class EndpointConfiguration(object):
         return self.__endpoint
 
     def _set_endpoint(self, endpoint):
+        if isinstance(endpoint, basestring):
+            endpoint = urlparse(str(endpoint))
         if endpoint is not None and endpoint.path:
             raise ValueError("apiEndpoint should not contain a path")
         if endpoint is not None and (

@@ -11,7 +11,7 @@ class ConvertAmount(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_ConvertAmount
     
     Attributes:
-        converted_amount:  int
+        converted_amount:  long
      """
 
     converted_amount = None

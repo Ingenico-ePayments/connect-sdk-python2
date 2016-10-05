@@ -11,9 +11,9 @@ class Level3SummaryData(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_Level3SummaryData
     
     Attributes:
-        discount_amount:  int
-        duty_amount:      int
-        shipping_amount:  int
+        discount_amount:  long
+        duty_amount:      long
+        shipping_amount:  long
      """
 
     discount_amount = None

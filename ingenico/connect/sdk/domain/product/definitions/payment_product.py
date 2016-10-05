@@ -21,8 +21,8 @@ class PaymentProduct(DataObject):
         display_hints:                 :class:`PaymentProductDisplayHints`
         fields:                        list[:class:`PaymentProductField`]
         id:                            int
-        max_amount:                    int
-        min_amount:                    int
+        max_amount:                    long
+        min_amount:                    long
         mobile_integration_level:      str
         payment_method:                str
         payment_product_group:         str

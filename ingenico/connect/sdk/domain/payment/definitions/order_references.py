@@ -14,7 +14,7 @@ class OrderReferences(DataObject):
     Attributes:
         descriptor:          str
         invoice_data:        :class:`OrderInvoiceData`
-        merchant_order_id:   int
+        merchant_order_id:   long
         merchant_reference:  str
      """
 

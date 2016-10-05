@@ -11,13 +11,13 @@ class LineItemLevel3InterchangeInformation(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_LineItemLevel3InterchangeInformation
     
     Attributes:
-        discount_amount:    int
-        line_amount_total:  int
+        discount_amount:    long
+        line_amount_total:  long
         product_code:       str
-        product_price:      int
+        product_price:      long
         product_type:       str
-        quantity:           int
-        tax_amount:         int
+        quantity:           long
+        tax_amount:         long
         unit:               str
      """
 

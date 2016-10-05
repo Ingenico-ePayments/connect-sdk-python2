@@ -12,7 +12,7 @@ class ConvertAmountParams(ParamRequest):
     
     Attributes:
         source:  str
-        amount:  int
+        amount:  long
         target:  str
     """
 

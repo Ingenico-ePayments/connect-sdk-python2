@@ -58,7 +58,7 @@ class CommunicatorConfiguration(EndpointConfiguration):
 
     @api_endpoint.setter
     def api_endpoint(self, api_endpoint):
-        super(CommunicatorConfiguration, self)._endpoint(api_endpoint)
+        super(CommunicatorConfiguration, self)._set_endpoint(api_endpoint)
 
     @property
     def api_key_id(self):

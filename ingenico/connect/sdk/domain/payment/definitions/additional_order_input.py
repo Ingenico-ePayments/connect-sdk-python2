@@ -16,7 +16,7 @@ class AdditionalOrderInput(DataObject):
     Attributes:
         airline_data:            :class:`AirlineData`
         level3_summary_data:     :class:`Level3SummaryData`
-        number_of_installments:  int
+        number_of_installments:  long
         order_date:              str
         type_information:        :class:`OrderTypeInformation`
      """

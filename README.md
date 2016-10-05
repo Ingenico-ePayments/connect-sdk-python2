@@ -20,8 +20,10 @@ This repository consists out of four main components:
 
 1. The source code of the SDK itself: `/ingenico/connect/sdk/` 
 2. The source code of the SDK unit tests: `/tests/unit/`
-3. The source code of the example integration tests: `/tests/integration/`
+3. The source code of the SDK integration tests: `/tests/integration/`
 4. Usage examples: `/examples/`
+
+Note that the source code of the unit tests and integration tests and the examples can only be found on GitHub.
 
 ## Requirements
 

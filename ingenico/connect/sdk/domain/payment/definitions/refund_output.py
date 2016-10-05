@@ -14,7 +14,7 @@ class RefundOutput(OrderOutput):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_RefundOutput
     
     Attributes:
-        amount_paid:                             int
+        amount_paid:                             long
         bank_refund_method_specific_output:      :class:`RefundBankMethodSpecificOutput`
         card_refund_method_specific_output:      :class:`RefundCardMethodSpecificOutput`
         e_wallet_refund_method_specific_output:  :class:`RefundEWalletMethodSpecificOutput`

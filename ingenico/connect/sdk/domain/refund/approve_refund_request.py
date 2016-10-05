@@ -11,7 +11,7 @@ class ApproveRefundRequest(DataObject):
     See also https://developer.globalcollect.com/documentation/api/server/#schema_ApproveRefundRequest
     
     Attributes:
-        amount:  int
+        amount:  long
      """
 
     amount = None

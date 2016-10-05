@@ -15,7 +15,7 @@ class LineItemInvoiceData(DataObject):
         merchant_linenumber:  str
         merchant_pagenumber:  str
         nr_of_items:          str
-        price_per_item:       int
+        price_per_item:       long
      """
 
     description = None
