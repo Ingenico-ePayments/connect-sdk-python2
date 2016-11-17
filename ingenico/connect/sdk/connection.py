@@ -54,5 +54,5 @@ class Connection(LoggingCapable):
         :return: :class:`Response`
         :raise: CommunicationException when an exception occurred communicating
          with the GlobalCollect platform
-         """
+        """
         raise NotImplementedError

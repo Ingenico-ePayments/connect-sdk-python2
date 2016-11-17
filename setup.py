@@ -21,7 +21,7 @@ def test_collector():
 
 setup(
     name="connect-sdk-python2",
-    version="1.1.0",
+    version="2.0.0",
     author="Ingenico ePayments",
     author_email="github@epay.ingenico.com",
     description="SDK to communicate with the GlobalCollect platform using the Ingenico Connect Server API",
@@ -30,13 +30,13 @@ setup(
     keywords="Ingenico ePayments Connect SDK",
     url="https://github.com/Ingenico-ePayments/connect-sdk-python2",
     packages=find_packages(
-    exclude=["*.examples", "*.examples.*", "examples.*", "examples",
-             # exclude examples
-             "*.tests", "*.tests.*", "tests.*", "tests"],  # and tests
-    include="ingenico.*"),  # finds all source packages, recursively
+        exclude=["*.examples", "*.examples.*", "examples.*", "examples",  # exclude examples
+                 "*.tests", "*.tests.*", "tests.*", "tests"],             # and tests
+        include="ingenico.*"),  # finds all source packages, recursively
     # list non-code files used by the SDK
     package_data={".": ["MANIFEST.in", "README.md", "setup.py"]},
     # data_files=[(".", ["LICENSE.txt"])],
+    # installs all files listed in the MANIFEST.in into the installation (currently does not seem to happen either way)
     include_package_data=True,
     # data_files=[("index.rst", "README.md", "setup.py, MANIFEST.in")],  # list miscellaneous files to include
     # The pypi homepage is based on the long description, standard interpretation is reStructuredText
@@ -51,8 +51,8 @@ setup(
         "Topic :: Office/Business :: Financial",
         "License :: OSI Approved :: MIT License"
     ],
-    scripts=[],  # executeable python scripts, none since this is a library
-    install_requires=[  # list of dependencies using comparison operators to specify compliant versions
+    scripts=[],  # executable python scripts, none since this is a library
+    install_requires=[
         "requests >= 2.11.0",
         "django >= 1.10"
     ],

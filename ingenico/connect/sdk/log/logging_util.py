@@ -129,13 +129,7 @@ class LoggingUtil:
         :param charset: The charset to use to read the body input stream.
         """
         if charset is None:
-            # if isinstance(arg, str) or arg is None:
-                return LoggingUtil.__property_obfuscator.obfuscate(arg)
-            # else:
-            #     body = ""
-            #     for line in arg.readlines():
-            #         body += line
-            #     return LoggingUtil.obfuscate_body(str(body))
+            return LoggingUtil.__property_obfuscator.obfuscate(arg)
         if charset is not None:
             return LoggingUtil.obfuscate_body(codecs.decode(arg, charset))
 

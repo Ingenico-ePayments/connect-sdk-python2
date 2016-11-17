@@ -29,7 +29,7 @@ class DefaultMarshaller(Marshaller):
         if issubclass(type_class, DataObject):
             try:
                 return type_class().from_dictionary(loads(response_json))
-            except ValueError as e  :
+            except ValueError as e:
                 raise MarshallerSyntaxException(e)
         class Object(object):
             pass

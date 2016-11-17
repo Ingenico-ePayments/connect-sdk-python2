@@ -4,7 +4,6 @@
 .pydevproject
 main_test.py
 
-
 #python gitignote template from github
 # Byte-compiled / optimized / DLL files
 __pycache__/

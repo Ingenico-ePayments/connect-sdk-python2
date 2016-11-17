@@ -47,8 +47,7 @@ class Session(object):
     @property
     def authenticator(self):
         """
-        :return: The Authenticator object associated with this session. Never
-         None.
+        :return: The Authenticator object associated with this session. Never None.
         """
         return self.__authenticator
 
@@ -56,6 +55,6 @@ class Session(object):
     def meta_data_provider(self):
         """
         :return: The MetaDataProvider object associated with this session. Never
-         None.
+        None.
         """
         return self.__meta_data_provider

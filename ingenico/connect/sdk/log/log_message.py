@@ -39,7 +39,7 @@ class LogMessage(object):
         self.__headers += name + "=\""
         if value is not None and value.lower() != 'none':
             obfuscated_value = LoggingUtil.obfuscate_header(name, value)
-            self.__headers +=  obfuscated_value
+            self.__headers += obfuscated_value
             self.__header_list.append((name, "\"" + obfuscated_value + "\""))
         else:
             self.__header_list.append((name, "\"\""))

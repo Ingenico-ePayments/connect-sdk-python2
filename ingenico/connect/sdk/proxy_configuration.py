@@ -25,7 +25,7 @@ class ProxyConfiguration:
     def from_uri(uri, username=None, password=None):
         """
         Constructs a ProxyConfiguration from a URI; if username and/or password
-        are given they will be used instead of corresponding data in the uri
+        are given they will be used instead of corresponding data in the URI
         """
         parsed = urlparse(uri)
         scheme = parsed.scheme

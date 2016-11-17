@@ -22,7 +22,7 @@ class DefaultConnection(PooledConnection):
     :param connect_timeout: timeout in seconds before a pending connection is
      dropped
     :param socket_timeout: timeout in seconds before dropping an established
-     connection/ This is the time the server is allowed for a response
+     connection. This is the time the server is allowed for a response
     :param max_connections: the maximum number of connections in the connection
      pool
     :param proxy_configuration: ProxyConfiguration object that contains data
@@ -118,7 +118,7 @@ class DefaultConnection(PooledConnection):
         if headers and not isinstance(headers, dict):
             headers = {param.name: param.value for param in headers}
 
-        # send request with all parameters not declared in session and with callbacks for logging
+        # send request with all parameters not declared in session and with callback for logging response
         request = requests.Request(method, url, headers=headers, data=body,
                                    hooks={'response': self._log_response})
         prepped_request = self.__requests_session.prepare_request(request)

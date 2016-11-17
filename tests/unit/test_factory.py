@@ -9,7 +9,7 @@ from ingenico.connect.sdk.defaultimpl.default_connection import DefaultConnectio
 from ingenico.connect.sdk.defaultimpl.default_marshaller import DefaultMarshaller
 from ingenico.connect.sdk.factory import Factory
 from test_default_connection import DefaultConnectionTest
-from ingenico.connect.sdk.meta_data_provider import  MetaDataProvider
+from ingenico.connect.sdk.meta_data_provider import MetaDataProvider
 
 PROPERTIES_URI = os.path.abspath(os.path.join(__file__, os.pardir, "../resources/configuration.ini"))
 API_KEY_ID = "someKey"
