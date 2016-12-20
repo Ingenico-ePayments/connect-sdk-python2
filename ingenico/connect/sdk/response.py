@@ -57,9 +57,7 @@ class Response(object):
                 return value
 
     def __str__(self):
-        index = sys.path[0].index("connect-sdk-python")
-        path = sys.path[0][index:].replace("\\", ".") + "."
-        string = path + Response.__name__ + "[status_code=" + str(
+        string = Response.__name__ + "[status_code=" + str(
             self.__status_code)
         if self.__body is not None and len(self.__body) > 0:
             string += ",body='" + self.__body + "'"

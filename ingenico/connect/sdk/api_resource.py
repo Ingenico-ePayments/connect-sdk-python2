@@ -97,10 +97,8 @@ class ApiResource(object):
         if not isinstance(error_object,
                           (PaymentErrorResponse, PayoutErrorResponse,
                            RefundErrorResponse, ErrorResponse)):
-            index = sys.path[0].index("connect-sdk-python")
-            path = sys.path[0][index:].replace("\\", ".") + "."
             raise ValueError(
-                "unsupported error object: " + path +
+                "unsupported error object: " +
                 error_object.__class__.__name__)
         error_id = error_object.error_id
         errors = error_object.errors
