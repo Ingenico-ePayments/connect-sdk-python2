@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 1.1.0 documentation</title>
+    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 2.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1.0',
+        VERSION:     '2.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="connect-sdk-python2 1.1.0 documentation" href="#" />
+    <link rel="top" title="connect-sdk-python2 2.0.0 documentation" href="#" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -1224,7 +1224,7 @@ or scheme://host:port if authentication is absent</p>
 <dt id="ingenico.connect.sdk.proxy_configuration.ProxyConfiguration.from_uri">
 <em class="property">static </em><code class="descname">from_uri</code><span class="sig-paren">(</span><em>uri</em>, <em>username=None</em>, <em>password=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/proxy_configuration.html#ProxyConfiguration.from_uri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.proxy_configuration.ProxyConfiguration.from_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a ProxyConfiguration from a URI; if username and/or password
-are given they will be used instead of corresponding data in the uri</p>
+are given they will be used instead of corresponding data in the URI</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1529,8 +1529,7 @@ will be None or empty.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Authenticator object associated with this session. Never
-None.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Authenticator object associated with this session. Never None.</td>
 </tr>
 </tbody>
 </table>
@@ -1556,11 +1555,11 @@ None.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The MetaDataProvider object associated with this session. Never
-None.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The MetaDataProvider object associated with this session. Never</td>
 </tr>
 </tbody>
 </table>
+<p>None.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1660,7 +1659,7 @@ used as input for the HMAC algorithm.</li>
 <li><strong>connect_timeout</strong> &#8211; timeout in seconds before a pending connection is
 dropped</li>
 <li><strong>socket_timeout</strong> &#8211; timeout in seconds before dropping an established
-connection/ This is the time the server is allowed for a response</li>
+connection. This is the time the server is allowed for a response</li>
 <li><strong>max_connections</strong> &#8211; the maximum number of connections in the connection
 pool</li>
 <li><strong>proxy_configuration</strong> &#8211; ProxyConfiguration object that contains data
@@ -4878,7 +4877,6 @@ See also <a class="reference external" href="https://developer.globalcollect.com
 direct_debit_text:                     str
 is_recurring:                          bool
 payment_product705_specific_input:     <code class="xref py py-class docutils literal"><span class="pre">NonSepaDirectDebitPaymentProduct705SpecificInput</span></code>
-payment_product707_specific_input:     <code class="xref py py-class docutils literal"><span class="pre">NonSepaDirectDebitPaymentProduct707SpecificInput</span></code>
 recurring_payment_sequence_indicator:  str
 token:                                 str</dd>
 </dl>
@@ -4905,11 +4903,6 @@ token:                                 str</dd>
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_method_specific_input.NonSepaDirectDebitPaymentMethodSpecificInput.payment_product705_specific_input">
 <code class="descname">payment_product705_specific_input</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_method_specific_input.NonSepaDirectDebitPaymentMethodSpecificInput.payment_product705_specific_input" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_method_specific_input.NonSepaDirectDebitPaymentMethodSpecificInput.payment_product707_specific_input">
-<code class="descname">payment_product707_specific_input</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_method_specific_input.NonSepaDirectDebitPaymentMethodSpecificInput.payment_product707_specific_input" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -4991,81 +4984,6 @@ transaction_type:   str</dd>
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product705_specific_input.NonSepaDirectDebitPaymentProduct705SpecificInput.transaction_type">
 <code class="descname">transaction_type</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product705_specific_input.NonSepaDirectDebitPaymentProduct705SpecificInput.transaction_type" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<span class="target" id="module-ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input"></span><dl class="class">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput">
-<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.</code><code class="descname">NonSepaDirectDebitPaymentProduct707SpecificInput</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/non_sepa_direct_debit_payment_product707_specific_input.html#NonSepaDirectDebitPaymentProduct707SpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
-<p>Class NonSepaDirectDebitPaymentProduct707SpecificInput
-See also <a class="reference external" href="https://developer.globalcollect.com/documentation/api/server/#schema_NonSepaDirectDebitPaymentProduct707SpecificInput">https://developer.globalcollect.com/documentation/api/server/#schema_NonSepaDirectDebitPaymentProduct707SpecificInput</a></p>
-<dl class="docutils">
-<dt>Attributes:</dt>
-<dd>address_line1:         str
-address_line2:         str
-address_line3:         str
-address_line4:         str
-bank_account_iban:     <code class="xref py py-class docutils literal"><span class="pre">BankAccountIban</span></code>
-customer_bank_city:    str
-customer_bank_number:  str
-customer_bank_street:  str
-customer_bank_zip:     str</dd>
-</dl>
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line1">
-<code class="descname">address_line1</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line2">
-<code class="descname">address_line2</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line3">
-<code class="descname">address_line3</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line4">
-<code class="descname">address_line4</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.address_line4" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.bank_account_iban">
-<code class="descname">bank_account_iban</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.bank_account_iban" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_city">
-<code class="descname">customer_bank_city</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_city" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_number">
-<code class="descname">customer_bank_number</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_number" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_street">
-<code class="descname">customer_bank_street</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_street" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_zip">
-<code class="descname">customer_bank_zip</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.customer_bank_zip" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.from_dictionary">
-<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/non_sepa_direct_debit_payment_product707_specific_input.html#NonSepaDirectDebitPaymentProduct707SpecificInput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.from_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.to_dictionary">
-<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/non_sepa_direct_debit_payment_product707_specific_input.html#NonSepaDirectDebitPaymentProduct707SpecificInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.non_sepa_direct_debit_payment_product707_specific_input.NonSepaDirectDebitPaymentProduct707SpecificInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -9245,8 +9163,7 @@ mandate_signed:           bool</dd>
 See also <a class="reference external" href="https://developer.globalcollect.com/documentation/api/server/#schema_MandateNonSepaDirectDebit">https://developer.globalcollect.com/documentation/api/server/#schema_MandateNonSepaDirectDebit</a></p>
 <dl class="docutils">
 <dt>Attributes:</dt>
-<dd>payment_product705_specific_data:  <code class="xref py py-class docutils literal"><span class="pre">TokenNonSepaDirectDebitPaymentProduct705SpecificData</span></code>
-payment_product707_specific_data:  <code class="xref py py-class docutils literal"><span class="pre">TokenNonSepaDirectDebitPaymentProduct707SpecificData</span></code></dd>
+<dd>payment_product705_specific_data:  <code class="xref py py-class docutils literal"><span class="pre">TokenNonSepaDirectDebitPaymentProduct705SpecificData</span></code></dd>
 </dl>
 <dl class="method">
 <dt id="ingenico.connect.sdk.domain.token.definitions.mandate_non_sepa_direct_debit.MandateNonSepaDirectDebit.from_dictionary">
@@ -9256,11 +9173,6 @@ payment_product707_specific_data:  <code class="xref py py-class docutils litera
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.token.definitions.mandate_non_sepa_direct_debit.MandateNonSepaDirectDebit.payment_product705_specific_data">
 <code class="descname">payment_product705_specific_data</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.mandate_non_sepa_direct_debit.MandateNonSepaDirectDebit.payment_product705_specific_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.token.definitions.mandate_non_sepa_direct_debit.MandateNonSepaDirectDebit.payment_product707_specific_data">
-<code class="descname">payment_product707_specific_data</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.mandate_non_sepa_direct_debit.MandateNonSepaDirectDebit.payment_product707_specific_data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -9620,57 +9532,6 @@ bank_account_bban:  <code class="xref py py-class docutils literal"><span class=
 <dl class="method">
 <dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product705_specific_data.TokenNonSepaDirectDebitPaymentProduct705SpecificData.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/token/definitions/token_non_sepa_direct_debit_payment_product705_specific_data.html#TokenNonSepaDirectDebitPaymentProduct705SpecificData.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product705_specific_data.TokenNonSepaDirectDebitPaymentProduct705SpecificData.to_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<span class="target" id="module-ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data"></span><dl class="class">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData">
-<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.</code><code class="descname">TokenNonSepaDirectDebitPaymentProduct707SpecificData</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/token/definitions/token_non_sepa_direct_debit_payment_product707_specific_data.html#TokenNonSepaDirectDebitPaymentProduct707SpecificData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
-<p>Class TokenNonSepaDirectDebitPaymentProduct707SpecificData
-See also <a class="reference external" href="https://developer.globalcollect.com/documentation/api/server/#schema_TokenNonSepaDirectDebitPaymentProduct707SpecificData">https://developer.globalcollect.com/documentation/api/server/#schema_TokenNonSepaDirectDebitPaymentProduct707SpecificData</a></p>
-<dl class="docutils">
-<dt>Attributes:</dt>
-<dd>address_line1:      str
-address_line2:      str
-address_line3:      str
-address_line4:      str
-bank_account_iban:  <code class="xref py py-class docutils literal"><span class="pre">BankAccountIban</span></code></dd>
-</dl>
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line1">
-<code class="descname">address_line1</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line2">
-<code class="descname">address_line2</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line3">
-<code class="descname">address_line3</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line4">
-<code class="descname">address_line4</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.address_line4" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.bank_account_iban">
-<code class="descname">bank_account_iban</code><em class="property"> = None</em><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.bank_account_iban" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.from_dictionary">
-<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/token/definitions/token_non_sepa_direct_debit_payment_product707_specific_data.html#TokenNonSepaDirectDebitPaymentProduct707SpecificData.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.from_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.to_dictionary">
-<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/token/definitions/token_non_sepa_direct_debit_payment_product707_specific_data.html#TokenNonSepaDirectDebitPaymentProduct707SpecificData.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.token.definitions.token_non_sepa_direct_debit_payment_product707_specific_data.TokenNonSepaDirectDebitPaymentProduct707SpecificData.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
