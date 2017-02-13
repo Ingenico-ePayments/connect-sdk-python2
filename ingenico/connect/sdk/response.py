@@ -1,6 +1,3 @@
-import sys
-
-
 class Response(object):
     """
     Thrown when a response was received from the GlobalCollect platform which indicates an error.

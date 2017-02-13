@@ -1,5 +1,3 @@
-import sys
-
 from ingenico.connect.sdk.domain.errors.error_response import \
     ErrorResponse
 from ingenico.connect.sdk.domain.payment.payment_error_response import \
