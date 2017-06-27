@@ -30,16 +30,14 @@ class ResponseLogMessage(LogMessage):
                    self.headers + "\n  content-type :" + \
                    self.empty_if_none(
                        self.content_type) + "\n  body         " + \
-                   self.empty_if_none(
-                       self.body)
+                   self.empty_if_none(self.body)
 
         else:
             return "Incoming response (requestId='" + \
                    self.request_id + "', " + str(self.__duration) + " ms):\n" + \
-                   "  status_code:  " + str(
+                   "  status_code:  " + (
                 str(self.__status_code) + "\n  headers:      " + \
                 self.headers + "\n  content-type :" + \
                 self.empty_if_none(
                             self.content_type) + "\n  body         " + \
-                self.empty_if_none(
-                            self.body))
+                self.empty_if_none(self.body)).encode('utf-8', errors='backslashreplace')
