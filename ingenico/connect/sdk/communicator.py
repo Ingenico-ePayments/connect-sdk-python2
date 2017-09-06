@@ -16,7 +16,7 @@ from response_exception import ResponseException
 
 class Communicator(LoggingCapable):
     """
-    Used to communicate with the GlobalCollect platform web services.
+    Used to communicate with the Ingenico ePayments platform web services.
 
     It contains all the logic to transform a request object to a HTTP request
     and a HTTP response to a response object.
@@ -47,11 +47,11 @@ class Communicator(LoggingCapable):
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
         :raise: CommunicationException when an exception occurred communicating
-         with the GlobalCollect platform
+         with the Ingenico ePayments platform
         :raise: ResponseException when an error response was received from the
-         GlobalCollect platform
+         Ingenico ePayments platform
         :raise: ApiException when an error response was received from the
-         GlobalCollect platform which contained a list of errors
+         Ingenico ePayments platform which contained a list of errors
         """
         connection = self.__session.connection
         if request_parameters is None:
@@ -77,11 +77,11 @@ class Communicator(LoggingCapable):
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
         :raise: CommunicationException when an exception occurred communicating
-         with the GlobalCollect platform
+         with the Ingenico ePayments platform
         :raise: ResponseException when an error response was received from the
-         GlobalCollect platform
+         Ingenico ePayments platform
         :raise: ApiException when an error response was received from the
-         GlobalCollect platform which contained a list of errors
+         Ingenico ePayments platform which contained a list of errors
         """
         connection = self.__session.connection
         if request_parameters is None:
@@ -108,11 +108,11 @@ class Communicator(LoggingCapable):
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
         :raise: CommunicationException when an exception occurred communicating
-         with the GlobalCollect platform
+         with the Ingenico ePayments platform
         :raise: ResponseException when an error response was received from the
-         GlobalCollect platform
+         Ingenico ePayments platform
         :raise: ApiException when an error response was received from the
-         GlobalCollect platform which contained a list of errors
+         Ingenico ePayments platform which contained a list of errors
         """
         connection = self.__session.connection
         if request_parameters is None:
@@ -144,11 +144,11 @@ class Communicator(LoggingCapable):
         :param response_type: The type of response to return.
         :param context: The optional call context to use.
         :raise: CommunicationException when an exception occurred communicating
-         with the GlobalCollect platform
+         with the Ingenico ePayments platform
         :raise: ResponseException when an error response was received from the
-         GlobalCollect platform
+         Ingenico ePayments platform
         :raise: ApiException when an error response was received from the
-         GlobalCollect platform which contained a list of errors
+         Ingenico ePayments platform which contained a list of errors
         """
         connection = self.__session.connection
         if request_parameters is None:
