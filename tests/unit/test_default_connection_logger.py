@@ -314,6 +314,7 @@ class DefaultConnectionLoggerTest(unittest.TestCase):
         self.assertIsNotNone(response_entry[0])
         self.assertIsNone(response_entry[1],
                           "Error '{}' logged that should not have been thrown".format(response_entry[1]))
+        self.assertIsNone(response_entry[1])  # no exception
         # check that the response is formatted correctly
         self.assertResponse(response_entry[0], "testConnection")
 

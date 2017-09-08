@@ -41,6 +41,7 @@ class DefaultAuthenticator(Authenticator):
 
     def create_simple_authentication_signature(self, http_method, resource_uri,
                                                http_headers):
+        """Returns a v1HMAC authentication signature header"""
         if http_method is None or not http_method.strip():
             raise ValueError("http_method is required")
         if resource_uri is None:

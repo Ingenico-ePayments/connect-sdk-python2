@@ -2,6 +2,7 @@
 import base64
 import unittest
 
+from ingenico.connect.sdk.data_object import DataObject
 from ingenico.connect.sdk.defaultimpl.default_marshaller import DefaultMarshaller
 from ingenico.connect.sdk.domain.metadata.shopping_cart_extension import ShoppingCartExtension
 from ingenico.connect.sdk.meta_data_provider import MetaDataProvider

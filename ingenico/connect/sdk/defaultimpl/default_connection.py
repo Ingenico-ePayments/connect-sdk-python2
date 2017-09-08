@@ -114,6 +114,7 @@ class DefaultConnection(PooledConnection):
         headers = {} if not headers else headers
         if not isinstance(url, basestring):
             url = url.geturl()
+
         # convert the list of RequestParam objects to a dictionary of key:value pairs if neccecary
         if headers and not isinstance(headers, dict):
             headers = {param.name: param.value for param in headers}
