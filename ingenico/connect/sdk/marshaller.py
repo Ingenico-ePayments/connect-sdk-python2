@@ -8,8 +8,7 @@ class Marshaller(object):
         """
         Marshal a request object to a JSON string.
 
-        :param request_object: the object to marshal into a serialized JSON
-         string
+        :param request_object: the object to marshal into a serialized JSON string
         :return: the serialized JSON string of the request_object
         """
         raise NotImplementedError
@@ -19,8 +18,7 @@ class Marshaller(object):
         Unmarshal a JSON string to a response object.
 
         :param response_json: the json body that should be unmarshalled
-        :param type_class: The class to which the response_json should be
-         unmarshalled
+        :param type_class: The class to which the response_json should be unmarshalled
         :raise: MarshallerSyntaxException if the JSON is not a valid
          representation for an object of the given type
         """

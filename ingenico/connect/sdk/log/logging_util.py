@@ -19,18 +19,18 @@ class LoggingUtil:
                      keep_start_count=None, keep_end_count=None, full=None):
             self.case_insensitive = case_insensitive
             if fixed_length:
-                for name, count in fixed_length.items():
+                for name, count in fixed_length.iteritems():
                     obfuscators[name] = self.ValueObfuscator(count, 0, 0)
             if keep_start_count:
-                for name, count in keep_start_count.items():
+                for name, count in keep_start_count.iteritems():
                     obfuscators[name] = self.ValueObfuscator(0, count, 0)
             if keep_end_count:
-                for name, count in keep_end_count.items():
+                for name, count in keep_end_count.iteritems():
                     obfuscators[name] = self.ValueObfuscator(0, 0, count)
             if full:
                 for name in full:
                     obfuscators[name] = self.ValueObfuscator(0, 0, 0)
-            self.__obfuscators = tuple(obfuscators.items())
+            self.__obfuscators = tuple(obfuscators.iteritems())
             self.__obfuscator_keys = tuple(obfuscators)
 
         def obfuscate_value(self, key, value):
@@ -48,6 +48,7 @@ class LoggingUtil:
                 else:
                     if x == key:
                         return y
+            return None
 
         class ValueObfuscator:
             __mask_character = None
@@ -87,7 +88,7 @@ class LoggingUtil:
         def obfuscate(self, body):
             if body is None:
                 return None
-            if len(body) == 0:
+            if not body:
                 return ""
             index = 0
             s_obfuscate = ""
@@ -130,7 +131,7 @@ class LoggingUtil:
         """
         if charset is None:
             return LoggingUtil.__property_obfuscator.obfuscate(arg)
-        if charset is not None:
+        else:  # possible dead code
             return LoggingUtil.obfuscate_body(codecs.decode(arg, charset))
 
     @staticmethod

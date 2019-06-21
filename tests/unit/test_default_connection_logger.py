@@ -75,7 +75,7 @@ class DefaultConnectionLoggerTest(unittest.TestCase):
         with create_server_listening(handler) as address:  # start server to listen to request
             with create_client(address) as client:  # create client under test
                 client.enable_logging(logger)
-                response = client.merchant("1234").services().convertAmount(query_params)
+                response = client.merchant("1234").services().convert_amount(query_params)
 
         self.assertIsNotNone(response)
         self.assertIsNotNone(response.converted_amount)
@@ -107,11 +107,10 @@ class DefaultConnectionLoggerTest(unittest.TestCase):
 
         response_body = read_resource("createPayment.unicode.json")
 
+        additional_headers = (("Content-Type", "application/json"),
+                              ("Location", "http://localhost/v1/1234/payments/000000123410000595980000100001"))
         handler = self.create_handler(response_code=201, body=response_body,
-                                      additional_headers=(("Content-Type", "application/json"),
-                                                          ("Location",
-                                                           "http://localhost/v1/1234/payments/000000123410000595980000100001"
-                                                           )))
+                                      additional_headers=additional_headers)
         with create_server_listening(handler) as address:  # start server to listen to request
             with create_client(address) as client:  # create client under test
                 client.enable_logging(logger)
@@ -120,7 +119,9 @@ class DefaultConnectionLoggerTest(unittest.TestCase):
         self.assertIsNotNone(response)
         self.assertIsNotNone(response.payment)
         self.assertIsNotNone(response.payment.id)
-        self.assertEqual(response.payment.payment_output.redirect_payment_method_specific_output.payment_product840_specific_output.customer_account.surname, u"Schr\xf6der")
+        surname = response.payment.payment_output.redirect_payment_method_specific_output.\
+            payment_product840_specific_output.customer_account.surname
+        self.assertEqual(surname, u"Schr\xf6der")
         self.assertEqual(test_path, self.request_path,
                          'Request has arrived at "{1}" while it should have been delivered to "{0}"'.format(
                              test_path, self.request_path))
@@ -134,11 +135,10 @@ class DefaultConnectionLoggerTest(unittest.TestCase):
         request = create_payment_request()
 
         response_body = read_resource("createPayment.json")
+        additional_headers = (("content-Type", "application/json"),
+                              ("Location", "http://localhost/v1/1234/payments/000000123410000595980000100001"))
         handler = self.create_handler(response_code=201, body=response_body,
-                                      additional_headers=(("content-Type", "application/json"),
-                                                          ("Location",
-                                                           "http://localhost/v1/1234/payments/000000123410000595980000100001"
-                                                           )))
+                                      additional_headers=additional_headers)
         with create_server_listening(handler) as address:  # start server to listen to request
             with create_client(address) as client:  # create client under test
                 client.enable_logging(logger)
@@ -636,6 +636,7 @@ def createPayment_failure_rejected_request(request, test):
 
     return request.request_id, False
 
+
 def createPayment_failure_rejected_response(response, test):
     test.assertIsNotNone(response.get_duration())
     test.assertEqual(response.get_status_code(), 402)
@@ -647,6 +648,7 @@ def createPayment_failure_rejected_response(response, test):
     test.assertIsNotNone(response.body)
     test.assertTrue(len(response.body))
     return response.request_id, False
+
 
 def createPayment_request_test():
     return re.compile(r"""^  headers:[ ]+Connection.*$""", re.M)
@@ -670,6 +672,7 @@ def createPayment_request(request, test):
 
     return request.request_id, False
 
+
 def createPayment_unicode_request(request, test):
     test.assertEqual(request.method, "POST")
     test.assertEqual(request.uri, '/v1/1234/payments')
@@ -688,10 +691,10 @@ def createPayment_unicode_request(request, test):
 
     return request.request_id, False
 
+
 def createPayment_unicode_response(response, test):
     test.assertIsNotNone(response.get_duration())
     test.assertEqual(response.get_status_code(), 201)
-    #test.assertEqual(response.content_type, 'application/json')
     headers = response.get_header_list()
     test.assertTrue(len(list(filter((lambda header: header[0] == 'Date'), headers))))
     test.assertHeaderIn(('Content-Type', '"application/json"'), headers)
@@ -700,6 +703,7 @@ def createPayment_unicode_response(response, test):
     test.assertIsNotNone(response.body)
     test.assertTrue(len(response.body))
     return response.request_id, False
+
 
 def createPayment_response(response, test):
     test.assertIsNotNone(response.get_duration())
@@ -713,6 +717,7 @@ def createPayment_response(response, test):
     test.assertIsNotNone(response.body)
     test.assertTrue(len(response.body))
     return response.request_id, False
+
 
 def deleteToken_request(request, test):
     test.assertEqual(request.method, "DELETE")
@@ -738,7 +743,7 @@ def deleteToken_response(response, test):
 
 
 def generic_error():
-    return r"""Error\ occurred\ for\ outgoing\ request\ \(requestId\=\'([-a-zA-Z0-9]+)\'\,\ \d\.\d+\ s\)"""
+    return r"""Error\ occurred\ for\ outgoing\ request\ \(requestId\=\'([-a-zA-Z0-9]+)\'\,\ \d+\ s\)"""
 
 
 def notFound_response(response, test):
@@ -752,6 +757,7 @@ def notFound_response(response, test):
     test.assertIsNotNone(response.body)
     test.assertEqual(response.body, "Not Found")
     return response.request_id, False
+
 
 def testConnection_request(request, test):
     test.assertEqual(request.method, "GET")
@@ -789,6 +795,7 @@ def unknownServerError_response(response, test):
     test.assertIsNotNone(response.body)
     test.assertTrue(len(response.body))
     return response.request_id, False
+
 
 if __name__ == '__main__':
     unittest.main()

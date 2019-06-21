@@ -40,7 +40,7 @@ class WebhooksHelperTest(unittest.TestCase):
         when(marshaller).unmarshal(body, WebhooksEvent).thenReturn(event)
         helper = self.__create_helper(marshaller)
         InMemorySecretKeyStore.INSTANCE().store_secret_key(self.__KEY_ID, self.__SECRET_KEY)
-        request_headers = [RequestHeader(self.__SIGNATURE_HEADER, self.__SIGNATURE),RequestHeader(self.__KEY_ID_HEADER, self.__KEY_ID)]
+        request_headers = [RequestHeader(self.__SIGNATURE_HEADER, self.__SIGNATURE), RequestHeader(self.__KEY_ID_HEADER, self.__KEY_ID)]
         self.assertRaises(ApiVersionMismatchException, helper.unmarshal, body, request_headers)
 
     def test_unmarshal_no_secret_key_available(self):

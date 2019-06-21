@@ -41,5 +41,6 @@ class DirectoryParamsTest(unittest.TestCase):
 
         self.assertItemsEqual(expected, request_params)
 
+
 if __name__ == '__main__':
     unittest.main()

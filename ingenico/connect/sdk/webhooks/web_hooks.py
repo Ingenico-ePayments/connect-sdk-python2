@@ -15,7 +15,7 @@ class Webhooks:
         """
         return WebhooksHelperBuilder().with_marshaller(
             DefaultMarshaller.INSTANCE()).with_secret_key_store(
-            secret_key_store)
+                secret_key_store)
 
     @staticmethod
     def create_helper(secret_key_store):
