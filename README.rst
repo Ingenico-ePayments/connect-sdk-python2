@@ -43,9 +43,7 @@ Requirements
 Python 2.7 is required. In addition, the following packages are
 required:
 
--  `django <https://www.djangoproject.com/>`__ 1.10 or higher
--  `requests <http://docs.python-requests.org/en/master/>`__ 2.11.0 or
-   higher
+-  `requests <https://requests.readthedocs.io/>`__ 2.20.0 or higher
 -  `requests-toolbelt <https://toolbelt.readthedocs.io/>`__ 0.8.0 or
    higher
 
