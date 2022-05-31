@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.30.0 documentation</title>
+    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.31.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -327,7 +327,7 @@ request timestamp was present.</td>
 <span class="target" id="module-ingenico.connect.sdk.client"></span><dl class="class">
 <dt id="ingenico.connect.sdk.client.Client">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.client.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>communicator</em>, <em>client_meta_info=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/client.html#Client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.client.Client" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.api_resource.ApiResource" title="ingenico.connect.sdk.api_resource.ApiResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.api_resource.ApiResource</span></code></a>, <a class="reference internal" href="#ingenico.connect.sdk.log.logging_capable.LoggingCapable" title="ingenico.connect.sdk.log.logging_capable.LoggingCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.logging_capable.LoggingCapable</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.api_resource.ApiResource" title="ingenico.connect.sdk.api_resource.ApiResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.api_resource.ApiResource</span></code></a>, <a class="reference internal" href="#ingenico.connect.sdk.log.logging_capable.LoggingCapable" title="ingenico.connect.sdk.log.logging_capable.LoggingCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.logging_capable.LoggingCapable</span></code></a>, <a class="reference internal" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable" title="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable</span></code></a></p>
 <p>Ingenico ePayments platform client.</p>
 <p>This client and all its child clients are bound to one specific value for the X-GCS-ClientMetaInfo header.
 To get a new client with a different header value, use with_client_meta_info.</p>
@@ -335,6 +335,11 @@ To get a new client with a different header value, use with_client_meta_info.</p
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.client.Client.API_VERSION">
 <em class="property">static </em><code class="descname">API_VERSION</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/client.html#Client.API_VERSION"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.client.Client.API_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.client.Client.__abstractmethods__">
+<code class="descname">__abstractmethods__</code><em class="property"> = frozenset([])</em><a class="headerlink" href="#ingenico.connect.sdk.client.Client.__abstractmethods__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -427,6 +432,18 @@ To get a new client with a different header value, use with_client_meta_info.</p
 </dd></dl>
 
 <dl class="method">
+<dt id="ingenico.connect.sdk.client.Client.set_body_obfuscator">
+<code class="descname">set_body_obfuscator</code><span class="sig-paren">(</span><em>body_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/client.html#Client.set_body_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.client.Client.set_body_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current body obfuscator to use.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.client.Client.set_header_obfuscator">
+<code class="descname">set_header_obfuscator</code><span class="sig-paren">(</span><em>header_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/client.html#Client.set_header_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.client.Client.set_header_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current header obfuscator to use.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="ingenico.connect.sdk.client.Client.with_client_meta_info">
 <code class="descname">with_client_meta_info</code><span class="sig-paren">(</span><em>client_meta_info</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/client.html#Client.with_client_meta_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.client.Client.with_client_meta_info" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -456,10 +473,15 @@ platform such as a connection exception.</p>
 <span class="target" id="module-ingenico.connect.sdk.communicator"></span><dl class="class">
 <dt id="ingenico.connect.sdk.communicator.Communicator">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.communicator.</code><code class="descname">Communicator</code><span class="sig-paren">(</span><em>session</em>, <em>marshaller</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/communicator.html#Communicator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.log.logging_capable.LoggingCapable" title="ingenico.connect.sdk.log.logging_capable.LoggingCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.logging_capable.LoggingCapable</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.log.logging_capable.LoggingCapable" title="ingenico.connect.sdk.log.logging_capable.LoggingCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.logging_capable.LoggingCapable</span></code></a>, <a class="reference internal" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable" title="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable</span></code></a></p>
 <p>Used to communicate with the Ingenico ePayments platform web services.</p>
 <p>It contains all the logic to transform a request object to a HTTP request
 and a HTTP response to a response object.</p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.communicator.Communicator.__abstractmethods__">
+<code class="descname">__abstractmethods__</code><em class="property"> = frozenset([])</em><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator.__abstractmethods__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="ingenico.connect.sdk.communicator.Communicator.__enter__">
 <code class="descname">__enter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/communicator.html#Communicator.__enter__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator.__enter__" title="Permalink to this definition">¶</a></dt>
@@ -796,6 +818,18 @@ Ingenico ePayments platform which contained a list of errors</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.communicator.Communicator.set_body_obfuscator">
+<code class="descname">set_body_obfuscator</code><span class="sig-paren">(</span><em>body_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/communicator.html#Communicator.set_body_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator.set_body_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current body obfuscator to use.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.communicator.Communicator.set_header_obfuscator">
+<code class="descname">set_header_obfuscator</code><span class="sig-paren">(</span><em>header_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/communicator.html#Communicator.set_header_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator.set_header_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current header obfuscator to use.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1882,7 +1916,7 @@ used as input for the HMAC algorithm.</li>
 <span class="target" id="module-ingenico.connect.sdk.defaultimpl.default_connection"></span><dl class="class">
 <dt id="ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.defaultimpl.default_connection.</code><code class="descname">DefaultConnection</code><span class="sig-paren">(</span><em>connect_timeout</em>, <em>socket_timeout</em>, <em>max_connections=10</em>, <em>proxy_configuration=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/defaultimpl/default_connection.html#DefaultConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.pooled_connection.PooledConnection" title="ingenico.connect.sdk.pooled_connection.PooledConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.pooled_connection.PooledConnection</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.pooled_connection.PooledConnection" title="ingenico.connect.sdk.pooled_connection.PooledConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.pooled_connection.PooledConnection</span></code></a>, <a class="reference internal" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable" title="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable</span></code></a></p>
 <p>Provides an HTTP request interface, thread-safe</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1908,6 +1942,11 @@ request.
 Alternatively you can use request with the request method as the first
 parameter.</p>
 <p>URI, headers and body should be given on a per-request basis.</p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.__abstractmethods__">
+<code class="descname">__abstractmethods__</code><em class="property"> = frozenset([])</em><a class="headerlink" href="#ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.__abstractmethods__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.__enter__">
 <code class="descname">__enter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/defaultimpl/default_connection.html#DefaultConnection.__enter__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.__enter__" title="Permalink to this definition">¶</a></dt>
@@ -2045,6 +2084,18 @@ representing the request headers</li>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.set_body_obfuscator">
+<code class="descname">set_body_obfuscator</code><span class="sig-paren">(</span><em>body_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/defaultimpl/default_connection.html#DefaultConnection.set_body_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.set_body_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current body obfuscator to use.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.set_header_obfuscator">
+<code class="descname">set_header_obfuscator</code><span class="sig-paren">(</span><em>header_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/defaultimpl/default_connection.html#DefaultConnection.set_header_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.set_header_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current header obfuscator to use.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2516,8 +2567,9 @@ representation for an object of the given type</p>
 <div class="line">Notes:</div>
 </div>
 <ul class="simple">
-<li>The maximum length for 3-D Secure version 2 is AN3.</li>
-<li>The maximum length for paymentProductId 1503 (Boleto) is AN2.</li>
+<li>The maximum length for 3-D Secure version 2 is AN3 for payments that are processed by the GlobalCollect platform</li>
+<li>The maximum length for paymentProductId 1503 (Boleto) is AN2 for payments that are processed by the GlobalCollect platform</li>
+<li>The maximum length is 3 for payments that are processed by the WL Online Payment Acceptance platform</li>
 </ul>
 <p>Type: str</p>
 </dd></dl>
@@ -18722,58 +18774,6 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
-<span class="target" id="module-ingenico.connect.sdk.domain.services.settlement_details"></span><dl class="class">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails">
-<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.services.settlement_details.</code><code class="descname">SettlementDetails</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/services/settlement_details.html#SettlementDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.acquirer_reference_number">
-<code class="descname">acquirer_reference_number</code><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.acquirer_reference_number" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">The Acquirer Reference Number (ARN) is a unique identifier assigned to a card payment as it moves through the payment network.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.amount_of_money">
-<code class="descname">amount_of_money</code><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.amount_of_money" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">The payment amount</div>
-</div>
-<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney" title="ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney</span></code></a></p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.from_dictionary">
-<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/services/settlement_details.html#SettlementDetails.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.from_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.payment_id">
-<code class="descname">payment_id</code><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.payment_id" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Our unique payment transaction identifier.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.retrieval_reference_number">
-<code class="descname">retrieval_reference_number</code><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.retrieval_reference_number" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">The Retrieval Reference Number (RRN) provides a unique reference for a card payment, pinpointing it to a specific date.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.to_dictionary">
-<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/services/settlement_details.html#SettlementDetails.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails.to_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <span class="target" id="module-ingenico.connect.sdk.domain.services.test_connection"></span><dl class="class">
 <dt id="ingenico.connect.sdk.domain.services.test_connection.TestConnection">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.services.test_connection.</code><code class="descname">TestConnection</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/services/test_connection.html#TestConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.services.test_connection.TestConnection" title="Permalink to this definition">¶</a></dt>
@@ -20472,6 +20472,42 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
+<span class="target" id="module-ingenico.connect.sdk.log.body_obfuscator"></span><dl class="class">
+<dt id="ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.body_obfuscator.</code><code class="descname">BodyObfuscator</code><span class="sig-paren">(</span><em>additional_rules=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/body_obfuscator.html#BodyObfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that can be used to obfuscate properties in JSON bodies.</p>
+<dl class="method">
+<dt id="ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>additional_rules=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/body_obfuscator.html#BodyObfuscator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new  body obfuscator.
+This will contain some pre-defined obfuscation rules, as well as any provided custom rules</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>additional_rules</strong> – An optional mapping from property names to obfuscation rules,
+where an obfuscation rule is a function that obfuscates a single string,</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator.default_body_obfuscator">
+<em class="property">static </em><code class="descname">default_body_obfuscator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/body_obfuscator.html#BodyObfuscator.default_body_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator.default_body_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator.obfuscate_body">
+<code class="descname">obfuscate_body</code><span class="sig-paren">(</span><em>body</em>, <em>charset=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/body_obfuscator.html#BodyObfuscator.obfuscate_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator.obfuscate_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obfuscates the body from the given stream as necessary.
+:param body: The body to obfuscate, as string or bytes.
+:param charset: The charset to use to read the body bytes.</p>
+</dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-ingenico.connect.sdk.log.communicator_logger"></span><dl class="class">
 <dt id="ingenico.connect.sdk.log.communicator_logger.CommunicatorLogger">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.communicator_logger.</code><code class="descname">CommunicatorLogger</code><a class="reference internal" href="_modules/ingenico/connect/sdk/log/communicator_logger.html#CommunicatorLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.communicator_logger.CommunicatorLogger" title="Permalink to this definition">¶</a></dt>
@@ -20508,9 +20544,42 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
+<span class="target" id="module-ingenico.connect.sdk.log.header_obfuscator"></span><dl class="class">
+<dt id="ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.header_obfuscator.</code><code class="descname">HeaderObfuscator</code><span class="sig-paren">(</span><em>additional_rules=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/header_obfuscator.html#HeaderObfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class that can be used to obfuscate headers.</p>
+<dl class="method">
+<dt id="ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>additional_rules=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/header_obfuscator.html#HeaderObfuscator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new  header obfuscator.
+This will contain some pre-defined obfuscation rules, as well as any provided custom rules</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>additional_rules</strong> – An optional mapping from property names to obfuscation rules,
+where an obfuscation rule is a function that obfuscates a single string,</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator.default_header_obfuscator">
+<em class="property">static </em><code class="descname">default_header_obfuscator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/header_obfuscator.html#HeaderObfuscator.default_header_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator.default_header_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator.obfuscate_header">
+<code class="descname">obfuscate_header</code><span class="sig-paren">(</span><em>header_name</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/header_obfuscator.html#HeaderObfuscator.obfuscate_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator.obfuscate_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obfuscates the value for the given header as necessary.</p>
+</dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-ingenico.connect.sdk.log.log_message"></span><dl class="class">
 <dt id="ingenico.connect.sdk.log.log_message.LogMessage">
-<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.log_message.</code><code class="descname">LogMessage</code><span class="sig-paren">(</span><em>request_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/log_message.html#LogMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.log_message.LogMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.log_message.</code><code class="descname">LogMessage</code><span class="sig-paren">(</span><em>request_id</em>, <em>body_obfuscator=&lt;ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator object&gt;</em>, <em>header_obfuscator=&lt;ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator instance&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/log_message.html#LogMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.log_message.LogMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A utility class to build log messages.</p>
 <dl class="method">
@@ -20560,7 +20629,7 @@ representation for an object of the given type</p>
 
 <dl class="method">
 <dt id="ingenico.connect.sdk.log.log_message.LogMessage.set_body">
-<code class="descname">set_body</code><span class="sig-paren">(</span><em>body</em>, <em>content_type</em>, <em>charset=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/log_message.html#LogMessage.set_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.log_message.LogMessage.set_body" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_body</code><span class="sig-paren">(</span><em>body</em>, <em>content_type</em>, <em>charset=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/log_message.html#LogMessage.set_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.log_message.LogMessage.set_body" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -20599,17 +20668,80 @@ communicators.</p>
 <dd><p>A utility class to support logging.</p>
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.log.logging_util.LoggingUtil.obfuscate_body">
-<em class="property">static </em><code class="descname">obfuscate_body</code><span class="sig-paren">(</span><em>arg</em>, <em>charset=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/logging_util.html#LoggingUtil.obfuscate_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.logging_util.LoggingUtil.obfuscate_body" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obfuscates the body from the given stream as necessary.
-:param charset: The charset to use to read the body input stream.</p>
+<em class="property">static </em><code class="descname">obfuscate_body</code><span class="sig-paren">(</span><em>body</em>, <em>charset=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/logging_util.html#LoggingUtil.obfuscate_body"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.logging_util.LoggingUtil.obfuscate_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obfuscates the body from the given stream as necessary.</p>
+<p>Deprecated; Use BodyObfuscator instead</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>body</strong> – The body to obfuscate, as string or bytes</li>
+<li><strong>charset</strong> – The charset to use to read the body input stream.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.log.logging_util.LoggingUtil.obfuscate_header">
 <em class="property">static </em><code class="descname">obfuscate_header</code><span class="sig-paren">(</span><em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/logging_util.html#LoggingUtil.obfuscate_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.logging_util.LoggingUtil.obfuscate_header" title="Permalink to this definition">¶</a></dt>
 <dd><p>Obfuscates the value for the given header as necessary.</p>
+<p>Deprecated; Use HeaderObfuscator instead</p>
 </dd></dl>
 
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.log.obfuscation_capable"></span><dl class="class">
+<dt id="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.obfuscation_capable.</code><code class="descname">ObfuscationCapable</code><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_capable.html#ObfuscationCapable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Classes that extend this class support obfuscating bodies and headers.</p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable.__abstractmethods__">
+<code class="descname">__abstractmethods__</code><em class="property"> = frozenset(['set_header_obfuscator', 'set_body_obfuscator'])</em><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable.__abstractmethods__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable.set_body_obfuscator">
+<code class="descname">set_body_obfuscator</code><span class="sig-paren">(</span><em>body_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_capable.html#ObfuscationCapable.set_body_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable.set_body_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current body obfuscator to use.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable.set_header_obfuscator">
+<code class="descname">set_header_obfuscator</code><span class="sig-paren">(</span><em>header_obfuscator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_capable.html#ObfuscationCapable.set_header_obfuscator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable.set_header_obfuscator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current header obfuscator to use.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.log.obfuscation_rule"></span><dl class="function">
+<dt id="ingenico.connect.sdk.log.obfuscation_rule.obfuscate_all">
+<code class="descclassname">ingenico.connect.sdk.log.obfuscation_rule.</code><code class="descname">obfuscate_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_rule.html#obfuscate_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_rule.obfuscate_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an obfuscation rule (function) that will replace all characters with *</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ingenico.connect.sdk.log.obfuscation_rule.obfuscate_all_but_first">
+<code class="descclassname">ingenico.connect.sdk.log.obfuscation_rule.</code><code class="descname">obfuscate_all_but_first</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_rule.html#obfuscate_all_but_first"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_rule.obfuscate_all_but_first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an obfuscation rule (function) that will keep a fixed number of characters at the start,
+then replaces all other characters with *</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ingenico.connect.sdk.log.obfuscation_rule.obfuscate_all_but_last">
+<code class="descclassname">ingenico.connect.sdk.log.obfuscation_rule.</code><code class="descname">obfuscate_all_but_last</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_rule.html#obfuscate_all_but_last"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_rule.obfuscate_all_but_last" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an obfuscation rule that will keep a fixed number of characters at the end,
+then replaces all other characters with *</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ingenico.connect.sdk.log.obfuscation_rule.obfuscate_with_fixed_length">
+<code class="descclassname">ingenico.connect.sdk.log.obfuscation_rule.</code><code class="descname">obfuscate_with_fixed_length</code><span class="sig-paren">(</span><em>fixed_length</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/obfuscation_rule.html#obfuscate_with_fixed_length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.obfuscation_rule.obfuscate_with_fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an obfuscation rule (function) that will replace values with a fixed length string containing only *</p>
 </dd></dl>
 
 <span class="target" id="module-ingenico.connect.sdk.log.python_communicator_logger"></span><dl class="class">
@@ -20669,7 +20801,7 @@ error_log_level.</p>
 
 <span class="target" id="module-ingenico.connect.sdk.log.request_log_message"></span><dl class="class">
 <dt id="ingenico.connect.sdk.log.request_log_message.RequestLogMessage">
-<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.request_log_message.</code><code class="descname">RequestLogMessage</code><span class="sig-paren">(</span><em>request_id</em>, <em>method</em>, <em>uri</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/request_log_message.html#RequestLogMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.request_log_message.RequestLogMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.request_log_message.</code><code class="descname">RequestLogMessage</code><span class="sig-paren">(</span><em>request_id</em>, <em>method</em>, <em>uri</em>, <em>body_obfuscator=&lt;ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator object&gt;</em>, <em>header_obfuscator=&lt;ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator instance&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/request_log_message.html#RequestLogMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.request_log_message.RequestLogMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.log.log_message.LogMessage" title="ingenico.connect.sdk.log.log_message.LogMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.log_message.LogMessage</span></code></a></p>
 <p>A utility class to build request log messages.</p>
 <dl class="method">
@@ -20681,7 +20813,7 @@ error_log_level.</p>
 
 <span class="target" id="module-ingenico.connect.sdk.log.response_log_message"></span><dl class="class">
 <dt id="ingenico.connect.sdk.log.response_log_message.ResponseLogMessage">
-<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.response_log_message.</code><code class="descname">ResponseLogMessage</code><span class="sig-paren">(</span><em>request_id</em>, <em>status_code</em>, <em>duration=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/response_log_message.html#ResponseLogMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.response_log_message.ResponseLogMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.log.response_log_message.</code><code class="descname">ResponseLogMessage</code><span class="sig-paren">(</span><em>request_id</em>, <em>status_code</em>, <em>duration=-1</em>, <em>body_obfuscator=&lt;ingenico.connect.sdk.log.body_obfuscator.BodyObfuscator object&gt;</em>, <em>header_obfuscator=&lt;ingenico.connect.sdk.log.header_obfuscator.HeaderObfuscator instance&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/log/response_log_message.html#ResponseLogMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.log.response_log_message.ResponseLogMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.log.log_message.LogMessage" title="ingenico.connect.sdk.log.log_message.LogMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.log_message.LogMessage</span></code></a></p>
 <p>A utility class to build request log messages.</p>
 <dl class="method">
@@ -24562,46 +24694,6 @@ or the service that you’re trying to reach is temporary unavailable (HTTP stat
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><a class="reference internal" href="#ingenico.connect.sdk.domain.services.get_privacy_policy_response.GetPrivacyPolicyResponse" title="ingenico.connect.sdk.domain.services.get_privacy_policy_response.GetPrivacyPolicyResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.services.get_privacy_policy_response.GetPrivacyPolicyResponse</span></code></a></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ValidationException if the request was not correct and couldn’t be processed (HTTP status code 400)</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">AuthorizationException if the request was not allowed (HTTP status code 403)</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ReferenceException if an object was attempted to be referenced that doesn’t exist or has been removed,
-or there was a conflict (HTTP status code 404, 409 or 410)</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">GlobalCollectException if something went wrong at the Ingenico ePayments platform,
-the Ingenico ePayments platform was unable to process a message from a downstream partner/acquirer,
-or the service that you’re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException if the Ingenico ePayments platform returned any other error</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="ingenico.connect.sdk.merchant.services.services_client.ServicesClient.settlementdetails">
-<code class="descname">settlementdetails</code><span class="sig-paren">(</span><em>payment_id</em>, <em>context=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/services/services_client.html#ServicesClient.settlementdetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.services.services_client.ServicesClient.settlementdetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource /{merchantId}/services/settlementdetails/{paymentId} - Get Settlement details</p>
-<p>See also <a class="reference external" href="https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/services/settlementdetails.html">https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/services/settlementdetails.html</a></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>payment_id</strong> – str</li>
-<li><strong>context</strong> – <a class="reference internal" href="#ingenico.connect.sdk.call_context.CallContext" title="ingenico.connect.sdk.call_context.CallContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.call_context.CallContext</span></code></a></li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><a class="reference internal" href="#ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails" title="ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.services.settlement_details.SettlementDetails</span></code></a></p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ValidationException if the request was not correct and couldn’t be processed (HTTP status code 400)</p>
