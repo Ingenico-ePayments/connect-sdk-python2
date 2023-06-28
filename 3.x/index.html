@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.39.0 documentation</title>
+    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.40.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -5896,6 +5896,15 @@ representation for an object of the given type</p>
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.created_payment_output.CreatedPaymentOutput.is_checked_remember_me">
+<code class="descname">is_checked_remember_me</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.created_payment_output.CreatedPaymentOutput.is_checked_remember_me" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates whether the customer ticked the “Remember my details for future purchases” checkbox on the MyCheckout hosted payment pages</div>
+</div>
+<p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.created_payment_output.CreatedPaymentOutput.payment">
 <code class="descname">payment</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.created_payment_output.CreatedPaymentOutput.payment" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -8787,7 +8796,7 @@ representation for an object of the given type</p>
 <dt id="ingenico.connect.sdk.domain.payment.definitions.card_payment_method_specific_input.CardPaymentMethodSpecificInput.card">
 <code class="descname">card</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.card_payment_method_specific_input.CardPaymentMethodSpecificInput.card" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">Object containing card details</div>
+<div class="line">Object containing card details. The card details will be ignored in case the property networkTokenData is present.</div>
 </div>
 <p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.card.Card" title="ingenico.connect.sdk.domain.definitions.card.Card"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.card.Card</span></code></a></p>
 </dd></dl>
@@ -9013,6 +9022,7 @@ representation for an object of the given type</p>
 <dd><ul class="simple">
 <li>first = This transaction is the first of a series of recurring transactions</li>
 <li>recurring = This transaction is a subsequent transaction in a series of recurring transactions</li>
+<li>last = This transaction is the last of a series of recurring transactions for payments that are processed by the WL Online Payment Acceptance platform</li>
 </ul>
 <div class="line-block">
 <div class="line">Note: For any first of a recurring the system will automatically create a token as you will need to use a token for any subsequent recurring transactions. In case a token already exists this is indicated in the response with a value of False for the isNewToken property in the response.</div>
@@ -10635,7 +10645,7 @@ representation for an object of the given type</p>
 <code class="descname">amount_of_money_per_installment</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.installments.Installments.amount_of_money_per_installment" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The amount that will be paid per installment. The total amount of amountOfMoneyPerInstallment x numberOfInstallments can not be higher than the total amount of this transaction, although we will not validate that.</div>
-<div class="line">For the payment product IDs 8590 (BC Card), 8591 (KEB Hana Card), 8592 (Hyundai Card), 8593 (KB Kookmin Card), 8594 (Lotte Card), 8595 (NH Card), 8596 (Samsung Card) or 8597 (Shinhan Card), this property is not used as the value is decided by the issuer.</div>
+<div class="line">For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), this property is not used as the value is decided by the issuer.</div>
 </div>
 <p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney" title="ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney</span></code></a></p>
 </dd></dl>
@@ -10653,7 +10663,7 @@ representation for an object of the given type</p>
 <li>quarterly</li>
 </ul>
 <div class="line-block">
-<div class="line">For the payment product IDs 8590 (BC Card), 8591 (KEB Hana Card), 8592 (Hyundai Card), 8593 (KB Kookmin Card), 8594 (Lotte Card), 8595 (NH Card), 8596 (Samsung Card) or 8597 (Shinhan Card), only the value monthly is valid.</div>
+<div class="line">For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), only the value monthly is valid.</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
@@ -10683,7 +10693,7 @@ representation for an object of the given type</p>
 <code class="descname">interest_rate</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.installments.Installments.interest_rate" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The interest rate paid for installments expressed in percentage. So for example 5.75 means 5.75%</div>
-<div class="line">For the payment product IDs 8590 (BC Card), 8591 (KEB Hana Card), 8592 (Hyundai Card), 8593 (KB Kookmin Card), 8594 (Lotte Card), 8595 (NH Card), 8596 (Samsung Card) or 8597 (Shinhan Card), this property is not used as the value is decided by the issuer.</div>
+<div class="line">For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), this property is not used as the value is decided by the issuer.</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
@@ -10693,7 +10703,7 @@ representation for an object of the given type</p>
 <code class="descname">number_of_installments</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.installments.Installments.number_of_installments" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The number of installments in which this transaction will be paid, which can be used for card payments at supported acquirers, or with specific payment products. Only used with some acquirers. In case you send in the details of this object, only the payment products (or  combination of card products and acquirers) that support installments will be shown on the MyCheckout hosted payment pages. If this property is not provided the customer will not see details on the installment plan in a HostedCheckout.</div>
-<div class="line">For the payment product IDs 8590 (BC Card), 8591 (KEB Hana Card), 8592 (Hyundai Card), 8593 (KB Kookmin Card), 8594 (Lotte Card), 8595 (NH Card), 8596 (Samsung Card) or 8597 (Shinhan Card), there is a maximum of 12 installments.</div>
+<div class="line">For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), there is a maximum of 12 installments.</div>
 </div>
 <p>Type: long</p>
 </dd></dl>
@@ -12395,6 +12405,15 @@ representation for an object of the given type</p>
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.payment_creation_output.PaymentCreationOutput.is_checked_remember_me">
+<code class="descname">is_checked_remember_me</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.payment_creation_output.PaymentCreationOutput.is_checked_remember_me" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates whether the customer ticked the “Remember my details for future purchases” checkbox on the MyCheckout hosted payment pages</div>
+</div>
+<p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.payment_creation_output.PaymentCreationOutput.is_new_token">
 <code class="descname">is_new_token</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.payment_creation_output.PaymentCreationOutput.is_new_token" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -13019,6 +13038,15 @@ representation for an object of the given type</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.payment_references.PaymentReferences.provider_merchant_id">
+<code class="descname">provider_merchant_id</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.payment_references.PaymentReferences.provider_merchant_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Provides an additional means of reconciliation, this is the MerchantId used at the provider</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.payment_references.PaymentReferences.provider_reference">
 <code class="descname">provider_reference</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.payment_references.PaymentReferences.provider_reference" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -13089,6 +13117,15 @@ representation for an object of the given type</p>
 <li>false</li>
 </ul>
 <p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.payment_status_output.PaymentStatusOutput.provider_raw_output">
+<code class="descname">provider_raw_output</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.payment_status_output.PaymentStatusOutput.provider_raw_output" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">This is the raw response returned by the acquirer. This property contains unprocessed data directly returned by the acquirer. It’s recommended for data analysis only due to its dynamic nature, which may undergo future changes.</div>
+</div>
+<p>Type: list[<a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.key_value_pair.KeyValuePair" title="ingenico.connect.sdk.domain.definitions.key_value_pair.KeyValuePair"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.key_value_pair.KeyValuePair</span></code></a>]</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -14236,6 +14273,15 @@ representation for an object of the given type</p>
 <dt id="ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.</code><code class="descname">SchemeTokenData</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/scheme_token_data.html#SchemeTokenData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData.cardholder_name">
+<code class="descname">cardholder_name</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData.cardholder_name" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The cardholder’s name on the card</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData.cryptogram">
 <code class="descname">cryptogram</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData.cryptogram" title="Permalink to this definition">¶</a></dt>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.domain.payment.definitions.scheme_token_data &#8212; connect-sdk-python2 3.39.0 documentation</title>
+    <title>ingenico.connect.sdk.domain.payment.definitions.scheme_token_data &#8212; connect-sdk-python2 3.40.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
@@ -43,10 +43,24 @@
 
 <div class="viewcode-block" id="SchemeTokenData"><a class="viewcode-back" href="../../../../../../../index.html#ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData">[docs]</a><span class="k">class</span> <span class="nc">SchemeTokenData</span><span class="p">(</span><span class="n">DataObject</span><span class="p">):</span>
 
+    <span class="n">__cardholder_name</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__cryptogram</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__eci</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__network_token</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__token_expiry_date</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cardholder_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The cardholder&#39;s name on the card</span>
+<span class="sd">        </span>
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cardholder_name</span>
+
+    <span class="nd">@cardholder_name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cardholder_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cardholder_name</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cryptogram</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -102,6 +116,8 @@
 
 <div class="viewcode-block" id="SchemeTokenData.to_dictionary"><a class="viewcode-back" href="../../../../../../../index.html#ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">SchemeTokenData</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cardholder_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;cardholderName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cardholder_name</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cryptogram</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;cryptogram&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cryptogram</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">eci</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -114,6 +130,8 @@
 
 <div class="viewcode-block" id="SchemeTokenData.from_dictionary"><a class="viewcode-back" href="../../../../../../../index.html#ingenico.connect.sdk.domain.payment.definitions.scheme_token_data.SchemeTokenData.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SchemeTokenData</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;cardholderName&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cardholder_name</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;cardholderName&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;cryptogram&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cryptogram</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;cryptogram&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;eci&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
