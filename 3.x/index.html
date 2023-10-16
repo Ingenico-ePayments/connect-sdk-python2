@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.42.0 documentation</title>
+    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.43.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -38,24 +38,18 @@
 <h1>Ingenico Connect Python SDK<a class="headerlink" href="#ingenico-connect-python-sdk" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>The Python SDK helps you to communicate with the <a class="reference external" href="https://epayments.developer-ingenico.com/">Ingenico
-Connect</a> Server API. Its
-primary features are:</p>
+<p>The Python SDK helps you to communicate with the <a class="reference external" href="https://epayments.developer-ingenico.com/">Ingenico Connect</a> Server API. Its primary features are:</p>
 <ul class="simple">
 <li>convenient Python library for the API calls and responses<ul>
 <li>marshalls Python request objects to HTTP requests</li>
-<li>unmarshalls HTTP responses to Python response objects or Python
-exceptions</li>
+<li>unmarshalls HTTP responses to Python response objects or Python exceptions</li>
 </ul>
 </li>
 <li>handling of all the details concerning authentication</li>
 <li>handling of required meta data</li>
 </ul>
-<p>Its use is demonstrated by an example for each possible call. The
-examples execute a call using the provided API keys.</p>
-<p>See the <a class="reference external" href="https://epayments.developer-ingenico.com/documentation/sdk/server/python/">Ingenico Connect Developer
-Hub</a>
-for more information on how to use the SDK.</p>
+<p>Its use is demonstrated by an example for each possible call. The examples execute a call using the provided API keys.</p>
+<p>See the <a class="reference external" href="https://epayments.developer-ingenico.com/documentation/sdk/server/python/">Ingenico Connect Developer Hub</a> for more information on how to use the SDK.</p>
 </div>
 <div class="section" id="structure-of-this-repository">
 <h2>Structure of this repository<a class="headerlink" href="#structure-of-this-repository" title="Permalink to this headline">¶</a></h2>
@@ -66,37 +60,29 @@ for more information on how to use the SDK.</p>
 <li>The source code of the SDK integration tests: <code class="docutils literal notranslate"><span class="pre">/tests/integration/</span></code></li>
 <li>Usage examples: <code class="docutils literal notranslate"><span class="pre">/examples/</span></code></li>
 </ol>
-<p>Note that the source code of the unit tests and integration tests and
-the examples can only be found on GitHub.</p>
+<p>Note that the source code of the unit tests and integration tests and the examples can only be found on GitHub.</p>
 </div>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>Python 2.7 is required. In addition, the following packages are
-required:</p>
+<p>Python 2.7 is required. In addition, the following packages are required:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://requests.readthedocs.io/">requests</a> 2.25.0 or higher</li>
-<li><a class="reference external" href="https://toolbelt.readthedocs.io/">requests-toolbelt</a> 0.8.0 or
-higher</li>
+<li><a class="reference external" href="https://toolbelt.readthedocs.io/">requests-toolbelt</a> 0.8.0 or higher</li>
 </ul>
-<p>These packages will be installed automatically if the SDK is installed
-manually or using pip following the below instructions.</p>
+<p>These packages will be installed automatically if the SDK is installed manually or using pip following the below instructions.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>To install the SDK using pip, execute the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">connect</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python2</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">connect</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python2</span>
 </pre></div>
 </div>
 <p>Alternatively, you can install the SDK from a source distribution file:</p>
 <ol class="arabic">
-<li><p class="first">Download the latest version of the Python SDK from GitHub. Choose the
-<code class="docutils literal notranslate"><span class="pre">connect-sdk-python2-x.y.z.zip</span></code> file from the
-<a class="reference external" href="https://github.com/Ingenico-ePayments/connect-sdk-python2/releases">releases</a>
-page, where <code class="docutils literal notranslate"><span class="pre">x.y.z</span></code> is the version number.</p>
+<li><p class="first">Download the latest version of the Python SDK from GitHub. Choose the <code class="docutils literal notranslate"><span class="pre">connect-sdk-python2-x.y.z.zip</span></code> file from the <a class="reference external" href="https://github.com/Ingenico-ePayments/connect-sdk-python2/releases">releases</a> page, where <code class="docutils literal notranslate"><span class="pre">x.y.z</span></code> is the version number.</p>
 </li>
-<li><p class="first">Execute the following command in the folder where the SDK was
-downloaded to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">connect</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python2</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">zip</span>
+<li><p class="first">Execute the following command in the folder where the SDK was downloaded to:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">connect</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python2</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">zip</span>
 </pre></div>
 </div>
 </li>
@@ -104,60 +90,45 @@ downloaded to:</p>
 </div>
 <div class="section" id="uninstalling">
 <h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this headline">¶</a></h2>
-<p>After the Python SDK has been installed, it can be uninstalled using the
-following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">connect</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python2</span>
+<p>After the Python SDK has been installed, it can be uninstalled using the following command:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">connect</span><span class="o">-</span><span class="n">sdk</span><span class="o">-</span><span class="n">python2</span>
 </pre></div>
 </div>
 <p>The required packages can be uninstalled in the same way.</p>
 </div>
 <div class="section" id="running-tests">
 <h2>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h2>
-<p>There are two types of tests: unit tests and integration tests. The unit
-tests will work out-of-the-box; for the integration tests some
-configuration is required. First, some environment variables need to be
-set:</p>
+<p>There are two types of tests: unit tests and integration tests. The unit tests will work out-of-the-box; for the integration tests some configuration is required.
+First, some environment variables need to be set:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">connect.api.apiKeyId</span></code> for the API key id to use. This can be
-retrieved from the Configuration Center.</li>
-<li><code class="docutils literal notranslate"><span class="pre">connect.api.secretApiKey</span></code> for the secret API key to use. This can
-be retrieved from the Configuration Center.</li>
+<li><code class="docutils literal notranslate"><span class="pre">connect.api.apiKeyId</span></code> for the API key id to use. This can be retrieved from the Configuration Center.</li>
+<li><code class="docutils literal notranslate"><span class="pre">connect.api.secretApiKey</span></code> for the secret API key to use. This can be retrieved from the Configuration Center.</li>
 <li><code class="docutils literal notranslate"><span class="pre">connect.api.merchantId</span></code> for your merchant ID.</li>
 </ul>
-<p>In addition, to run the proxy integration tests, the proxy URI, username
-and password should be set in the
-<code class="docutils literal notranslate"><span class="pre">tests/resources/configuration.proxy.ini</span></code> file.</p>
-<p>In order to run the unit and integration tests, the
-<a class="reference external" href="https://pypi.python.org/pypi/mock">mock</a> backport and
-<a class="reference external" href="https://pypi.python.org/pypi/mockito">mockito</a> are required. These
-can be installed using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mock</span> <span class="s1">&#39;mockito&lt;1.3.1&#39;</span>
+<p>In addition, to run the proxy integration tests, the proxy URI, username and password should be set in the <code class="docutils literal notranslate"><span class="pre">tests/resources/configuration.proxy.ini</span></code> file.</p>
+<p>In order to run the unit and integration tests, the <a class="reference external" href="https://pypi.python.org/pypi/mock">mock</a> backport and <a class="reference external" href="https://pypi.python.org/pypi/mockito">mockito</a> are required. These can be installed using the following command:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">mock</span> <span class="s1">&#39;mockito&lt;1.3.1&#39;</span>
 </pre></div>
 </div>
-<p>The following commands can now be executed from the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory
-to execute the tests:</p>
+<p>The following commands can now be executed from the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory to execute the tests:</p>
 <ul>
 <li><p class="first">Unit tests:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_unit_tests</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_unit_tests</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Integration tests:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_integration_tests</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_integration_tests</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Both unit and integration tests:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_all_tests</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_all_tests</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </li>
 </ul>
-<p>Note: in the current version of the unit tests, two errors will pop up
-([Errno 10053] for Windows and [Errno 32] for Linux), indicating that
-there was a client disconnect. These errors occur during cleanup of the
-tests and do not hinder the tests in any way, and should therefore be
-ignored.</p>
+<p>Note: in the current version of the unit tests, two errors will pop up ([Errno 10053] for Windows and [Errno 32] for Linux), indicating that there was a client disconnect. These errors occur during cleanup of the tests and do not hinder the tests in any way, and should therefore be ignored.</p>
 </div>
 </div>
 <div class="section" id="module-ingenico.connect.sdk.api_exception">
@@ -6097,6 +6068,43 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
+<span class="target" id="module-ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.</code><code class="descname">Frequency</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/frequency.html#Frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">The object containing the frequency and interval between recurring payments.</div>
+</div>
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/frequency.html#Frequency.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.interval">
+<code class="descname">interval</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.interval" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The interval between recurring payments specified as days, weeks, quarters, or years.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.interval_frequency">
+<code class="descname">interval_frequency</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.interval_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The number of days, weeks, months, quarters, or years between recurring payments.</div>
+</div>
+<p>Type: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/frequency.html#Frequency.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-ingenico.connect.sdk.domain.hostedcheckout.definitions.hosted_checkout_specific_input"></span><dl class="class">
 <dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.hosted_checkout_specific_input.HostedCheckoutSpecificInput">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.hostedcheckout.definitions.hosted_checkout_specific_input.</code><code class="descname">HostedCheckoutSpecificInput</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/hosted_checkout_specific_input.html#HostedCheckoutSpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.hosted_checkout_specific_input.HostedCheckoutSpecificInput" title="Permalink to this definition">¶</a></dt>
@@ -6135,6 +6143,22 @@ representation for an object of the given type</p>
 <div class="line">Contains the payment product ids and payment product groups that will be used for manipulating the payment products available for the payment to the customer.</div>
 </div>
 <p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.payment_product_filters_hosted_checkout.PaymentProductFiltersHostedCheckout" title="ingenico.connect.sdk.domain.hostedcheckout.definitions.payment_product_filters_hosted_checkout.PaymentProductFiltersHostedCheckout"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedcheckout.definitions.payment_product_filters_hosted_checkout.PaymentProductFiltersHostedCheckout</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.hosted_checkout_specific_input.HostedCheckoutSpecificInput.recurring_payments_data">
+<code class="descname">recurring_payments_data</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.hosted_checkout_specific_input.HostedCheckoutSpecificInput.recurring_payments_data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing reference data for the text that can be displayed on MyCheckout hosted payment page with subscription information.</div>
+</div>
+<div class="line-block">
+<div class="line">Note:</div>
+</div>
+<div class="line-block">
+<div class="line">The data in this object is only meant for displaying recurring payments-related data on your checkout page.</div>
+<div class="line">You still need to submit all the recurring payment-related data in the corresponding payment product-specific input. (example: cardPaymentMethodSpecificInput.recurring and cardPaymentMethodSpecificInput.isRecurring)</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData" title="ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6404,6 +6428,168 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
+<span class="target" id="module-ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.</code><code class="descname">RecurringPaymentsData</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/recurring_payments_data.html#RecurringPaymentsData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">The object containing reference data for the text that can be displayed on MyCheckout hosted payment page with subscription information.</div>
+</div>
+<div class="line-block">
+<div class="line">Note:</div>
+</div>
+<div class="line-block">
+<div class="line">The data in this object is only meant for displaying recurring payments-related data on your checkout page.</div>
+<div class="line">You still need to submit all the recurring payment-related data in the corresponding payment product-specific input. (example: cardPaymentMethodSpecificInput.recurring and cardPaymentMethodSpecificInput.isRecurring)</div>
+</div>
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/recurring_payments_data.html#RecurringPaymentsData.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.recurring_interval">
+<code class="descname">recurring_interval</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.recurring_interval" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing the frequency and interval between recurring payments.</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency" title="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/recurring_payments_data.html#RecurringPaymentsData.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.trial_information">
+<code class="descname">trial_information</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.recurring_payments_data.RecurringPaymentsData.trial_information" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing data of the trial period: no-cost or discounted time-constrained trial subscription period. </div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation" title="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.</code><code class="descname">TrialInformation</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/trial_information.html#TrialInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">The object containing data of the trial period: no-cost or discounted time-constrained trial subscription period.</div>
+</div>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.amount_of_money_after_trial">
+<code class="descname">amount_of_money_after_trial</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.amount_of_money_after_trial" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing the amount and ISO currency code attributes of money to be paid after the trial period ends.</div>
+</div>
+<div class="line-block">
+<div class="line">Note:</div>
+</div>
+<div class="line-block">
+<div class="line">The property order.amountOfMoney should be populated with the amount to be paid during or for the trial period (no-cost or discounted time-constrained trial subscription period).</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney" title="ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.end_date">
+<code class="descname">end_date</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.end_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date that the trial period ends in YYYYMMDD format.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/trial_information.html#TrialInformation.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.is_recurring">
+<code class="descname">is_recurring</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.is_recurring" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The property specifying if there will be recurring charges throughout the trial period (when the trial period involves a temporary discounted rate).</div>
+<div class="line">True = there will be recurring charges during the trial period</div>
+<div class="line">False = there will not be recurring charges during the trial period</div>
+</div>
+<p>Type: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/trial_information.html#TrialInformation.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.trial_period">
+<code class="descname">trial_period</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.trial_period" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing information on the trial period duration and the interval between payments during that period.</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod" title="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.trial_period_recurring">
+<code class="descname">trial_period_recurring</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_information.TrialInformation.trial_period_recurring" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing the frequency and interval between recurring payments.</div>
+</div>
+<div class="line-block">
+<div class="line">Note:</div>
+</div>
+<div class="line-block">
+<div class="line">This object should only be populated if the frequency of recurring payments between the trial and regular periods is different.</div>
+</div>
+<div class="line-block">
+<div class="line">If you do not populated this object, then the same interval frequency and interval of recurringPaymentsData.recurringInterval will be used</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency" title="ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedcheckout.definitions.frequency.Frequency</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.</code><code class="descname">TrialPeriod</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/trial_period.html#TrialPeriod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">The object containing information on the trial period duration and the interval between payments during that period.</div>
+</div>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.duration">
+<code class="descname">duration</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.duration" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The number of days, weeks, months, or years before the trial period ends.</div>
+</div>
+<p>Type: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/trial_period.html#TrialPeriod.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.interval">
+<code class="descname">interval</code><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.interval" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The interval for the trial period to finish specified as days, weeks, months, quarters, or years.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedcheckout/definitions/trial_period.html#TrialPeriod.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedcheckout.definitions.trial_period.TrialPeriod.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-ingenico.connect.sdk.domain.hostedmandatemanagement.create_hosted_mandate_management_request"></span><dl class="class">
 <dt id="ingenico.connect.sdk.domain.hostedmandatemanagement.create_hosted_mandate_management_request.CreateHostedMandateManagementRequest">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.hostedmandatemanagement.create_hosted_mandate_management_request.</code><code class="descname">CreateHostedMandateManagementRequest</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/hostedmandatemanagement/create_hosted_mandate_management_request.html#CreateHostedMandateManagementRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.hostedmandatemanagement.create_hosted_mandate_management_request.CreateHostedMandateManagementRequest" title="Permalink to this definition">¶</a></dt>
@@ -6661,6 +6847,182 @@ representation for an object of the given type</p>
 </div>
 <p>Type: str</p>
 </dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.installments.get_installment_request"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.installments.get_installment_request.</code><code class="descname">GetInstallmentRequest</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/get_installment_request.html#GetInstallmentRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Using the Installment Service API you can ask us to provide you with information related to the available installment options, based on the country, amount and optionally payment productId and bin number.  </div>
+</div>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.amount_of_money">
+<code class="descname">amount_of_money</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.amount_of_money" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing amount and ISO currency code attributes</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney" title="ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.bin">
+<code class="descname">bin</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.bin" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The first digits of the card number from left to right with a minimum of 6 digits</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.country_code">
+<code class="descname">country_code</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.country_code" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">ISO 3166-1 alpha-2 country code</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/get_installment_request.html#GetInstallmentRequest.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.payment_product_id">
+<code class="descname">payment_product_id</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.payment_product_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Payment product identifier </div>
+<div class="line">Please see payment products &lt;<a class="reference external" href="https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/paymentproducts.html">https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/paymentproducts.html</a>&gt; for a full overview of possible values.</div>
+</div>
+<p>Type: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/get_installment_request.html#GetInstallmentRequest.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.installments.installment_options_response"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.installments.installment_options_response.</code><code class="descname">InstallmentOptionsResponse</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/installment_options_response.html#InstallmentOptionsResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">The response contains the details of the installment options</div>
+</div>
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/installment_options_response.html#InstallmentOptionsResponse.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse.installment_options">
+<code class="descname">installment_options</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse.installment_options" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Array containing installment options their details and characteristics</div>
+</div>
+<p>Type: list[<a class="reference internal" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions" title="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions</span></code></a>]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/installment_options_response.html#InstallmentOptionsResponse.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.installments.definitions.installment_display_hints"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.</code><code class="descname">InstallmentDisplayHints</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/definitions/installment_display_hints.html#InstallmentDisplayHints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Object containing information for the client on how best to display this options</div>
+</div>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.display_order">
+<code class="descname">display_order</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.display_order" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Determines the order in which the installment options should be shown (sorted ascending). In countries like Turkey there are multiple loyalty programs that offer installments</div>
+</div>
+<p>Type: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/definitions/installment_display_hints.html#InstallmentDisplayHints.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.label">
+<code class="descname">label</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.label" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Name of the installment option</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.logo">
+<code class="descname">logo</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.logo" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Partial URL that you can reference for the image of this installment provider. You can use our server-side resize functionality by appending ‘?size={{width}}x{{height}}’ to the full URL, where width and height are specified in pixels. The resized image will always keep its correct aspect ratio.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/definitions/installment_display_hints.html#InstallmentDisplayHints.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.installments.definitions.installment_options"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.installments.definitions.installment_options.</code><code class="descname">InstallmentOptions</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/definitions/installment_options.html#InstallmentOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Array containing installment options their details and characteristics</div>
+</div>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.display_hints">
+<code class="descname">display_hints</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.display_hints" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing information for the client on how best to display the installment options</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints" title="ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.installments.definitions.installment_display_hints.InstallmentDisplayHints</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/definitions/installment_options.html#InstallmentOptions.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.id">
+<code class="descname">id</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The ID of the installment option in our system</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.installment_plans">
+<code class="descname">installment_plans</code><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.installment_plans" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing information about installment plans</div>
+</div>
+<p>Type: list[<a class="reference internal" href="#ingenico.connect.sdk.domain.payment.definitions.installments.Installments" title="ingenico.connect.sdk.domain.payment.definitions.installments.Installments"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.payment.definitions.installments.Installments</span></code></a>]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/installments/definitions/installment_options.html#InstallmentOptions.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.installments.definitions.installment_options.InstallmentOptions.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -10701,6 +11063,15 @@ representation for an object of the given type</p>
 <dd><div class="line-block">
 <div class="line">The amount that will be paid per installment. The total amount of amountOfMoneyPerInstallment x numberOfInstallments can not be higher than the total amount of this transaction, although we will not validate that.</div>
 <div class="line">For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), this property is not used as the value is decided by the issuer.</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney" title="ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.installments.Installments.amount_of_money_total">
+<code class="descname">amount_of_money_total</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.installments.Installments.amount_of_money_total" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing the total amount and ISO currency code attributes</div>
 </div>
 <p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney" title="ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.amount_of_money.AmountOfMoney</span></code></a></p>
 </dd></dl>
@@ -21377,6 +21748,20 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="method">
+<dt id="ingenico.connect.sdk.merchant.merchant_client.MerchantClient.installments">
+<code class="descname">installments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/merchant_client.html#MerchantClient.installments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.merchant_client.MerchantClient.installments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource /{merchantId}/installments</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="#ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient" title="ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="ingenico.connect.sdk.merchant.merchant_client.MerchantClient.mandates">
 <code class="descname">mandates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/merchant_client.html#MerchantClient.mandates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.merchant_client.MerchantClient.mandates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource /{merchantId}/mandates</p>
@@ -22127,6 +22512,70 @@ or the service that you’re trying to reach is temporary unavailable (HTTP stat
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><a class="reference internal" href="#ingenico.connect.sdk.domain.hostedmandatemanagement.get_hosted_mandate_management_response.GetHostedMandateManagementResponse" title="ingenico.connect.sdk.domain.hostedmandatemanagement.get_hosted_mandate_management_response.GetHostedMandateManagementResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.hostedmandatemanagement.get_hosted_mandate_management_response.GetHostedMandateManagementResponse</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ValidationException if the request was not correct and couldn’t be processed (HTTP status code 400)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">AuthorizationException if the request was not allowed (HTTP status code 403)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ReferenceException if an object was attempted to be referenced that doesn’t exist or has been removed,
+or there was a conflict (HTTP status code 404, 409 or 410)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">GlobalCollectException if something went wrong at the Ingenico ePayments platform,
+the Ingenico ePayments platform was unable to process a message from a downstream partner/acquirer,
+or the service that you’re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException if the Ingenico ePayments platform returned any other error</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.merchant.installments.installments_client"></span><dl class="class">
+<dt id="ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.merchant.installments.installments_client.</code><code class="descname">InstallmentsClient</code><span class="sig-paren">(</span><em>parent</em>, <em>path_context</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/installments/installments_client.html#InstallmentsClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.api_resource.ApiResource" title="ingenico.connect.sdk.api_resource.ApiResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.api_resource.ApiResource</span></code></a></p>
+<p>Installments client. Thread-safe.</p>
+<dl class="method">
+<dt id="ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>parent</em>, <em>path_context</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/installments/installments_client.html#InstallmentsClient.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>parent</strong> – <a class="reference internal" href="#ingenico.connect.sdk.api_resource.ApiResource" title="ingenico.connect.sdk.api_resource.ApiResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.api_resource.ApiResource</span></code></a></li>
+<li><strong>path_context</strong> – dict[str, str]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient.get_installments_info">
+<code class="descname">get_installments_info</code><span class="sig-paren">(</span><em>body</em>, <em>context=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/installments/installments_client.html#InstallmentsClient.get_installments_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient.get_installments_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource /{merchantId}/installments/getInstallmentsInfo - Get Installment Info</p>
+<p>See also <a class="reference external" href="https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/installments/getInstallmentsInfo.html">https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/installments/getInstallmentsInfo.html</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>body</strong> – <a class="reference internal" href="#ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest" title="ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.installments.get_installment_request.GetInstallmentRequest</span></code></a></li>
+<li><strong>context</strong> – <a class="reference internal" href="#ingenico.connect.sdk.call_context.CallContext" title="ingenico.connect.sdk.call_context.CallContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.call_context.CallContext</span></code></a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><a class="reference internal" href="#ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse" title="ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.installments.installment_options_response.InstallmentOptionsResponse</span></code></a></p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ValidationException if the request was not correct and couldn’t be processed (HTTP status code 400)</p>
