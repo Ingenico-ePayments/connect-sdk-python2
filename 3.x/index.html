@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.43.0 documentation</title>
+    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.44.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -8630,10 +8630,100 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
+<span class="target" id="module-ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.</code><code class="descname">AccountFundingRecipient</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/account_funding_recipient.html#AccountFundingRecipient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Object containing specific data regarding the recipient of an account funding transaction</div>
+</div>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.account_number">
+<code class="descname">account_number</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.account_number" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Should be populated with the value of the corresponding accountNumberType of the recipient.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.account_number_type">
+<code class="descname">account_number_type</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.account_number_type" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Defines the account number type of the recipient. Possible values are:</div>
+</div>
+<ul class="simple">
+<li>cash = Mode of payment is cash to the recipient.</li>
+<li>walletId = Digital wallet ID.</li>
+<li>routingNumber = Routing Transit Number is a code used by financial institutions to identify other financial institutions.</li>
+<li>iban = International Bank Account Number, is a standard international numbering system for identifying bank accounts.</li>
+<li>bicNumber = Bank Identification Code is a number that is used to identify a specific bank.</li>
+</ul>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.address">
+<code class="descname">address</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.address" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing the address details of the recipient of an account funding transaction.</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.address.Address" title="ingenico.connect.sdk.domain.definitions.address.Address"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.address.Address</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.date_of_birth">
+<code class="descname">date_of_birth</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.date_of_birth" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date of birth of the recipient</div>
+<div class="line">Format: YYYYMMDD</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/account_funding_recipient.html#AccountFundingRecipient.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.name">
+<code class="descname">name</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.name" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing the name details of the recipient of an account funding transaction.</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName" title="ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.partial_pan">
+<code class="descname">partial_pan</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.partial_pan" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Either partialPan or accountnumber is required for merchants that use Merchant Category Code (MCC) 6012 for transactions involving UK costumers.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/account_funding_recipient.html#AccountFundingRecipient.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-ingenico.connect.sdk.domain.payment.definitions.additional_order_input"></span><dl class="class">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.additional_order_input.AdditionalOrderInput">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.additional_order_input.</code><code class="descname">AdditionalOrderInput</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/additional_order_input.html#AdditionalOrderInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.additional_order_input.AdditionalOrderInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.additional_order_input.AdditionalOrderInput.account_funding_recipient">
+<code class="descname">account_funding_recipient</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.additional_order_input.AdditionalOrderInput.account_funding_recipient" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing specific data regarding the recipient of an account funding transaction</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient" title="ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.payment.definitions.account_funding_recipient.AccountFundingRecipient</span></code></a></p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.additional_order_input.AdditionalOrderInput.airline_data">
 <code class="descname">airline_data</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.additional_order_input.AdditionalOrderInput.airline_data" title="Permalink to this definition">¶</a></dt>
@@ -8674,6 +8764,7 @@ representation for an object of the given type</p>
 <div class="line">Object containing specific data regarding the recipient of a loan in the UK</div>
 </div>
 <p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient" title="ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient</span></code></a></p>
+<p>Deprecated; No replacement</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8742,6 +8833,40 @@ representation for an object of the given type</p>
 <dl class="method">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.address_personal.AddressPersonal.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/address_personal.html#AddressPersonal.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.address_personal.AddressPersonal.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.domain.payment.definitions.afr_name"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.afr_name.</code><code class="descname">AfrName</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/afr_name.html#AfrName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.first_name">
+<code class="descname">first_name</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.first_name" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Given name(s) or first name(s) of the recipient of an account funding transaction.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/afr_name.html#AfrName.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.surname">
+<code class="descname">surname</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.surname" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Surname(s) or last name(s) of the customer</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/afr_name.html#AfrName.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.afr_name.AfrName.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -9921,6 +10046,19 @@ representation for an object of the given type</p>
 <dt id="ingenico.connect.sdk.domain.payment.definitions.customer.Customer.from_dictionary">
 <code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/customer.html#Customer.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.customer.Customer.from_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.customer.Customer.is_company">
+<code class="descname">is_company</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.customer.Customer.is_company" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates if the payer is a company or an individual</div>
+</div>
+<ul class="simple">
+<li>true =  This is a company</li>
+<li>false = This is an individual</li>
+</ul>
+<p>Type: bool</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.customer.Customer.is_previous_customer">
@@ -11450,6 +11588,7 @@ representation for an object of the given type</p>
 <dt id="ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.loan_recipient.</code><code class="descname">LoanRecipient</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/loan_recipient.html#LoanRecipient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<p>Deprecated; No replacement</p>
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient.account_number">
 <code class="descname">account_number</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.loan_recipient.LoanRecipient.account_number" title="Permalink to this definition">¶</a></dt>
@@ -11457,6 +11596,7 @@ representation for an object of the given type</p>
 <div class="line">Should be filled with the last 10 digits of the bank account number of the recipient of the loan.</div>
 </div>
 <p>Type: str</p>
+<p>Deprecated; No replacement</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -11467,6 +11607,7 @@ representation for an object of the given type</p>
 <div class="line">Format: YYYYMMDD</div>
 </div>
 <p>Type: str</p>
+<p>Deprecated; No replacement</p>
 </dd></dl>
 
 <dl class="method">
@@ -11481,6 +11622,7 @@ representation for an object of the given type</p>
 <div class="line">Should be filled with the first 6 and last 4 digits of the PAN number of the recipient of the loan.</div>
 </div>
 <p>Type: str</p>
+<p>Deprecated; No replacement</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -11490,6 +11632,7 @@ representation for an object of the given type</p>
 <div class="line">Surname of the recipient of the loan.</div>
 </div>
 <p>Type: str</p>
+<p>Deprecated; No replacement</p>
 </dd></dl>
 
 <dl class="method">
@@ -11504,6 +11647,7 @@ representation for an object of the given type</p>
 <div class="line">Zip code of the recipient of the loan</div>
 </div>
 <p>Type: str</p>
+<p>Deprecated; No replacement</p>
 </dd></dl>
 
 </dd></dl>
@@ -12674,6 +12818,22 @@ representation for an object of the given type</p>
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.order_type_information.OrderTypeInformation.funding_type">
+<code class="descname">funding_type</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.order_type_information.OrderTypeInformation.funding_type" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Identifies the funding type being authenticated. Possible values are:</div>
+</div>
+<ul class="simple">
+<li>personToPerson = When it is person to person funding (P2P)</li>
+<li>agentCashOut = When fund is being paid out to final recipient in Cash by company’s agent.</li>
+<li>businessToConsumer = When fund is being transferred from business to consumer (B2C)</li>
+<li>businessToBusiness = When fund is being transferred from business to business (B2B)</li>
+<li>prefundingStagedWallet = When funding is being used to load the funds into the wallet account.</li>
+</ul>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.order_type_information.OrderTypeInformation.purchase_type">
 <code class="descname">purchase_type</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.order_type_information.OrderTypeInformation.purchase_type" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -13577,6 +13737,59 @@ representation for an object of the given type</p>
 
 </dd></dl>
 
+<span class="target" id="module-ingenico.connect.sdk.domain.payment.definitions.personal_identification"></span><dl class="class">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.personal_identification.</code><code class="descname">PersonalIdentification</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/personal_identification.html#PersonalIdentification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.data_object.DataObject" title="ingenico.connect.sdk.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.data_object.DataObject</span></code></a></p>
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/personal_identification.html#PersonalIdentification.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.id_issuing_country_code">
+<code class="descname">id_issuing_country_code</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.id_issuing_country_code" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">ISO 3166-1 alpha-2 country code of the country that issued the identification document</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.id_type">
+<code class="descname">id_type</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.id_type" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates the type of identification </div>
+</div>
+<ul class="simple">
+<li>nationalIdentification = The provided idValue is a national identification number.</li>
+<li>passportNumber = The provided idValue is a passport number.</li>
+<li>driverLicense = The provided idValue is driving License of the individual.</li>
+<li>companyRegistrationNumber = The provided idValue is a company identifier. It verifies its legal existence as an incorporated entity.</li>
+<li>socialSecurityNumber =n The provided idValue is a social security number, issued to an individual by the individual’s government.</li>
+<li>alienRegistrationNumber = The provided idValue is an alien registration number, provided by immigration services of a country.</li>
+<li>lawEnforcementIdentification = The provided idValue is an alien registration number, provided by immigration services of a country.</li>
+<li>militaryIdentification = The provided idValue is an identification issued to military personnel of a country.</li>
+</ul>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.id_value">
+<code class="descname">id_value</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.id_value" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The value of the identification</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/personal_identification.html#PersonalIdentification.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-ingenico.connect.sdk.domain.payment.definitions.personal_information"></span><dl class="class">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.personal_information.PersonalInformation">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.personal_information.</code><code class="descname">PersonalInformation</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/personal_information.html#PersonalInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_information.PersonalInformation" title="Permalink to this definition">¶</a></dt>
@@ -13608,6 +13821,15 @@ representation for an object of the given type</p>
 <li>unknown or empty</li>
 </ul>
 <p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.personal_information.PersonalInformation.identification">
+<code class="descname">identification</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.personal_information.PersonalInformation.identification" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing identification documents information</div>
+</div>
+<p>Type: <a class="reference internal" href="#ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification" title="ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.payment.definitions.personal_identification.PersonalIdentification</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
