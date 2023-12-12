@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.domain.definitions.card_fraud_results &#8212; connect-sdk-python2 3.44.0 documentation</title>
+    <title>ingenico.connect.sdk.domain.definitions.card_fraud_results &#8212; connect-sdk-python2 3.45.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -41,7 +41,6 @@
 <span class="kn">from</span> <span class="nn">ingenico.connect.sdk.domain.definitions.fraud_results</span> <span class="kn">import</span> <span class="n">FraudResults</span>
 <span class="kn">from</span> <span class="nn">ingenico.connect.sdk.domain.definitions.fraud_results_retail_decisions</span> <span class="kn">import</span> <span class="n">FraudResultsRetailDecisions</span>
 <span class="kn">from</span> <span class="nn">ingenico.connect.sdk.domain.definitions.fraugster_results</span> <span class="kn">import</span> <span class="n">FraugsterResults</span>
-<span class="kn">from</span> <span class="nn">ingenico.connect.sdk.domain.definitions.microsoft_fraud_results</span> <span class="kn">import</span> <span class="n">MicrosoftFraudResults</span>
 
 
 <div class="viewcode-block" id="CardFraudResults"><a class="viewcode-back" href="../../../../../../index.html#ingenico.connect.sdk.domain.definitions.card_fraud_results.CardFraudResults">[docs]</a><span class="k">class</span> <span class="nc">CardFraudResults</span><span class="p">(</span><span class="n">FraudResults</span><span class="p">):</span>
@@ -52,7 +51,6 @@
     <span class="n">__avs_result</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__cvv_result</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__fraugster</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">__microsoft_fraud_protection</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__retail_decisions</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
@@ -128,19 +126,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__fraugster</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">microsoft_fraud_protection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        | This object contains the results of Microsoft Fraud Protection risk assessment. Microsoft collects transaction data points and uses Adaptive AI that continuously learns to protect you against payment fraud, and the device fingerprinting details from the Microsoft Device Fingerprinting service.</span>
-<span class="sd">        </span>
-<span class="sd">        Type: :class:`ingenico.connect.sdk.domain.definitions.microsoft_fraud_results.MicrosoftFraudResults`</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__microsoft_fraud_protection</span>
-
-    <span class="nd">@microsoft_fraud_protection</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">microsoft_fraud_protection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__microsoft_fraud_protection</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">retail_decisions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Additional response data returned by RetailDecisions</span>
@@ -161,8 +146,6 @@
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;cvvResult&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cvv_result</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fraugster</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fraugster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fraugster</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">microsoft_fraud_protection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;microsoftFraudProtection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">microsoft_fraud_protection</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">retail_decisions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;retailDecisions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retail_decisions</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
@@ -178,11 +161,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fraugster&#39;</span><span class="p">]))</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">FraugsterResults</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fraugster</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fraugster&#39;</span><span class="p">])</span>
-        <span class="k">if</span> <span class="s1">&#39;microsoftFraudProtection&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;microsoftFraudProtection&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;microsoftFraudProtection&#39;</span><span class="p">]))</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="n">MicrosoftFraudResults</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">microsoft_fraud_protection</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;microsoftFraudProtection&#39;</span><span class="p">])</span>
         <span class="k">if</span> <span class="s1">&#39;retailDecisions&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;retailDecisions&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;retailDecisions&#39;</span><span class="p">]))</span>
