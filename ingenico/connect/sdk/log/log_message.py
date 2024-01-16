@@ -70,7 +70,8 @@ class LogMessage(object):
         self.__content_type = content_type
         self.__body = "<binary content>"
 
-    def __is_binary(self, content_type):
+    @staticmethod
+    def __is_binary(content_type):
         if content_type is None:
             return False
         content_type = content_type.lower()
