@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input &#8212; connect-sdk-python2 3.45.0 documentation</title>
+    <title>ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input &#8212; connect-sdk-python2 3.46.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
@@ -36,7 +36,7 @@
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1">#</span>
 <span class="c1"># This class was auto-generated from the API references found at</span>
-<span class="c1"># https://epayments-api.developer-ingenico.com/s2sapi/v1/</span>
+<span class="c1"># https://epayments-api.developer-ingenico.com/</span>
 <span class="c1">#</span>
 <span class="kn">from</span> <span class="nn">ingenico.connect.sdk.domain.definitions.abstract_payment_method_specific_input</span> <span class="kn">import</span> <span class="n">AbstractPaymentMethodSpecificInput</span>
 <span class="kn">from</span> <span class="nn">ingenico.connect.sdk.domain.payment.definitions.card_recurrence_details</span> <span class="kn">import</span> <span class="n">CardRecurrenceDetails</span>
@@ -44,6 +44,7 @@
 
 <div class="viewcode-block" id="AbstractCardPaymentMethodSpecificInput"><a class="viewcode-back" href="../../../../../../../index.html#ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput">[docs]</a><span class="k">class</span> <span class="nc">AbstractCardPaymentMethodSpecificInput</span><span class="p">(</span><span class="n">AbstractPaymentMethodSpecificInput</span><span class="p">):</span>
 
+    <span class="n">__acquirer_promotion_code</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__authorization_mode</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__customer_reference</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__initial_scheme_transaction_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -58,6 +59,17 @@
     <span class="n">__unscheduled_card_on_file_indicator</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__unscheduled_card_on_file_requestor</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__unscheduled_card_on_file_sequence_indicator</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">acquirer_promotion_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acquirer_promotion_code</span>
+
+    <span class="nd">@acquirer_promotion_code</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">acquirer_promotion_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__acquirer_promotion_code</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">authorization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -221,6 +233,8 @@
 
 <div class="viewcode-block" id="AbstractCardPaymentMethodSpecificInput.to_dictionary"><a class="viewcode-back" href="../../../../../../../index.html#ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">AbstractCardPaymentMethodSpecificInput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">acquirer_promotion_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;acquirerPromotionCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">acquirer_promotion_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">authorization_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;authorizationMode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">authorization_mode</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">customer_reference</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -253,6 +267,8 @@
 
 <div class="viewcode-block" id="AbstractCardPaymentMethodSpecificInput.from_dictionary"><a class="viewcode-back" href="../../../../../../../index.html#ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AbstractCardPaymentMethodSpecificInput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;acquirerPromotionCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">acquirer_promotion_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;acquirerPromotionCode&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;authorizationMode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">authorization_mode</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;authorizationMode&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;customerReference&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>

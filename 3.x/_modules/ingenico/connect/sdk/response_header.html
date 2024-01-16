@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.response_header &#8212; connect-sdk-python2 3.45.0 documentation</title>
+    <title>ingenico.connect.sdk.response_header &#8212; connect-sdk-python2 3.46.0 documentation</title>
     <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
@@ -38,8 +38,7 @@
 
 <div class="viewcode-block" id="get_header_value"><a class="viewcode-back" href="../../../../index.html#ingenico.connect.sdk.response_header.get_header_value">[docs]</a><span class="k">def</span> <span class="nf">get_header_value</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="n">header_name</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :return: The value of the header with the given name, or None if there</span>
-<span class="sd">     was no such header.</span>
+<span class="sd">    :return: The value of the header with the given name, or None if there was no such header.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">headers</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -51,8 +50,7 @@
 
 <div class="viewcode-block" id="get_header"><a class="viewcode-back" href="../../../../index.html#ingenico.connect.sdk.response_header.get_header">[docs]</a><span class="k">def</span> <span class="nf">get_header</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="n">header_name</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :return: The header with the given name as a tuple with the name and</span>
-<span class="sd">     value, or None if there was no such header.</span>
+<span class="sd">    :return: The header with the given name as a tuple with the name and value, or None if there was no such header.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">headers</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -64,14 +62,12 @@
 
 <div class="viewcode-block" id="get_disposition_filename"><a class="viewcode-back" href="../../../../index.html#ingenico.connect.sdk.response_header.get_disposition_filename">[docs]</a><span class="k">def</span> <span class="nf">get_disposition_filename</span><span class="p">(</span><span class="n">headers</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :return: The value of the filename parameter of the Content-Disposition</span>
-<span class="sd">     header, or None if there was no such header or parameter.</span>
+<span class="sd">    :return: The value of the filename parameter of the Content-Disposition header, or None if there was no such header or parameter.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">header_value</span> <span class="o">=</span> <span class="n">get_header_value</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="s2">&quot;Content-Disposition&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">header_value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-        <span class="s2">&quot;(?:^|;)</span><span class="se">\\</span><span class="s2">s*filename</span><span class="se">\\</span><span class="s2">s*=</span><span class="se">\\</span><span class="s2">s*(.*?)</span><span class="se">\\</span><span class="s2">s*(?:;|$)&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;(?:^|;)</span><span class="se">\\</span><span class="s2">s*filename</span><span class="se">\\</span><span class="s2">s*=</span><span class="se">\\</span><span class="s2">s*(.*?)</span><span class="se">\\</span><span class="s2">s*(?:;|$)&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
     <span class="n">match</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">header_value</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.45.0 documentation</title>
+    <title>Ingenico Connect Python SDK &#8212; connect-sdk-python2 3.46.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -137,8 +137,7 @@ First, some environment variables need to be set:</p>
 <dt id="ingenico.connect.sdk.api_exception.ApiException">
 <em class="property">exception </em><code class="descclassname">ingenico.connect.sdk.api_exception.</code><code class="descname">ApiException</code><span class="sig-paren">(</span><em>status_code</em>, <em>response_body</em>, <em>error_id</em>, <em>errors</em>, <em>message='the Ingenico ePayments platform returned an error response'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/api_exception.html#ApiException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.api_exception.ApiException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.RuntimeError</span></code></p>
-<p>Represents an error response from the Ingenico ePayments platform which contains
-an ID and a list of errors.</p>
+<p>Represents an error response from the Ingenico ePayments platform which contains an ID and a list of errors.</p>
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.api_exception.ApiException.error_id">
 <code class="descname">error_id</code><a class="headerlink" href="#ingenico.connect.sdk.api_exception.ApiException.error_id" title="Permalink to this definition">¶</a></dt>
@@ -146,8 +145,7 @@ an ID and a list of errors.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The error ID received from the Ingenico ePayments platform if
-available.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The error ID received from the Ingenico ePayments platform if available.</td>
 </tr>
 </tbody>
 </table>
@@ -160,8 +158,7 @@ available.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The error list received from the Ingenico ePayments platform if
-available. Never None.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The error list received from the Ingenico ePayments platform if available. Never None.</td>
 </tr>
 </tbody>
 </table>
@@ -174,8 +171,7 @@ available. Never None.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The raw response body that was returned by the Ingenico ePayments
-platform.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The raw response body that was returned by the Ingenico ePayments platform.</td>
 </tr>
 </tbody>
 </table>
@@ -188,8 +184,7 @@ platform.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The HTTP status code that was returned by the Ingenico ePayments
-platform.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The HTTP status code that was returned by the Ingenico ePayments platform.</td>
 </tr>
 </tbody>
 </table>
@@ -232,7 +227,7 @@ platform.</td>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>http_method</strong> – The HTTP method.</li>
 <li><strong>resource_uri</strong> – The URI of the resource.</li>
-<li><strong>request_headers</strong> – A list of RequestHeaders. This list may not be
+<li><strong>request_headers</strong> – A sequence of RequestHeaders. This sequence may not be
 modified and may not contain headers with the same name.</li>
 </ul>
 </td>
@@ -247,22 +242,18 @@ modified and may not contain headers with the same name.</li>
 <dt id="ingenico.connect.sdk.authorization_exception.AuthorizationException">
 <em class="property">exception </em><code class="descclassname">ingenico.connect.sdk.authorization_exception.</code><code class="descname">AuthorizationException</code><span class="sig-paren">(</span><em>status_code</em>, <em>response_body</em>, <em>error_id</em>, <em>errors</em>, <em>message='the Ingenico ePayments platform returned an authorization error response'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/authorization_exception.html#AuthorizationException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.authorization_exception.AuthorizationException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.api_exception.ApiException" title="ingenico.connect.sdk.api_exception.ApiException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.api_exception.ApiException</span></code></a></p>
-<p>Represents an error response from the Ingenico ePayments platform when
-authorization failed.</p>
+<p>Represents an error response from the Ingenico ePayments platform when authorization failed.</p>
 </dd></dl>
 
 <span class="target" id="module-ingenico.connect.sdk.call_context"></span><dl class="class">
 <dt id="ingenico.connect.sdk.call_context.CallContext">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.call_context.</code><code class="descname">CallContext</code><span class="sig-paren">(</span><em>idempotence_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/call_context.html#CallContext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.call_context.CallContext" title="Permalink to this definition">¶</a></dt>
-<dd><p>A call context can be used to send extra information with a request, and to
-receive extra information from a response.</p>
-<p>Please note that this class is not thread-safe. Each request should get its
-own call context instance.</p>
+<dd><p>A call context can be used to send extra information with a request, and to receive extra information from a response.</p>
+<p>Please note that this class is not thread-safe. Each request should get its own call context instance.</p>
 <dl class="method">
 <dt id="ingenico.connect.sdk.call_context.CallContext.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>idempotence_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/call_context.html#CallContext.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.call_context.CallContext.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the idempotence key to use for the next request for which this call
-context is used.</p>
+<dd><p>Sets the idempotence key to use for the next request for which this call context is used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -437,8 +428,7 @@ To get a new client with a different header value, use with_client_meta_info.</p
 <dt id="ingenico.connect.sdk.communication_exception.CommunicationException">
 <em class="property">exception </em><code class="descclassname">ingenico.connect.sdk.communication_exception.</code><code class="descname">CommunicationException</code><span class="sig-paren">(</span><em>exception</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/communication_exception.html#CommunicationException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.communication_exception.CommunicationException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.RuntimeError</span></code></p>
-<p>Indicates an exception regarding the communication with the Ingenico ePayments
-platform such as a connection exception.</p>
+<p>Indicates an exception regarding the communication with the Ingenico ePayments platform such as a connection exception.</p>
 </dd></dl>
 
 <span class="target" id="module-ingenico.connect.sdk.communicator"></span><dl class="class">
@@ -446,8 +436,7 @@ platform such as a connection exception.</p>
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.communicator.</code><code class="descname">Communicator</code><span class="sig-paren">(</span><em>session</em>, <em>marshaller</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/communicator.html#Communicator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.log.logging_capable.LoggingCapable" title="ingenico.connect.sdk.log.logging_capable.LoggingCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.logging_capable.LoggingCapable</span></code></a>, <a class="reference internal" href="#ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable" title="ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.obfuscation_capable.ObfuscationCapable</span></code></a></p>
 <p>Used to communicate with the Ingenico ePayments platform web services.</p>
-<p>It contains all the logic to transform a request object to a HTTP request
-and a HTTP response to a response object.</p>
+<p>It contains all the logic to transform a request object to an HTTP request and an HTTP response to a response object.</p>
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.communicator.Communicator.__abstractmethods__">
 <code class="descname">__abstractmethods__</code><em class="property"> = frozenset([])</em><a class="headerlink" href="#ingenico.connect.sdk.communicator.Communicator.__abstractmethods__" title="Permalink to this definition">¶</a></dt>
@@ -510,16 +499,13 @@ does nothing.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -542,16 +528,13 @@ Ingenico ePayments platform which contained a list of errors</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -595,16 +578,13 @@ Ingenico ePayments platform which contained a list of errors</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -627,16 +607,13 @@ Ingenico ePayments platform which contained a list of errors</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -650,8 +627,7 @@ Ingenico ePayments platform which contained a list of errors</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Marshaller object associated with this communicator. Never
-None.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Marshaller object associated with this communicator. Never None.</td>
 </tr>
 </tbody>
 </table>
@@ -675,16 +651,13 @@ None.</td>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -708,16 +681,13 @@ Ingenico ePayments platform which contained a list of errors</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -742,16 +712,13 @@ Ingenico ePayments platform which contained a list of errors</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -775,16 +742,13 @@ Ingenico ePayments platform which contained a list of errors</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating
-with the Ingenico ePayments platform</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">CommunicationException when an exception occurred communicating with the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the
-Ingenico ePayments platform</p>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body"><p class="first">ResponseException when an error response was received from the Ingenico ePayments platform</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the
-Ingenico ePayments platform which contained a list of errors</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">ApiException when an error response was received from the Ingenico ePayments platform which contained a list of errors</p>
 </td>
 </tr>
 </tbody>
@@ -860,6 +824,12 @@ the HTTP request. This secret is used as input for the HMAC algorithm.</p>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.log.logging_capable.LoggingCapable" title="ingenico.connect.sdk.log.logging_capable.LoggingCapable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.log.logging_capable.LoggingCapable</span></code></a></p>
 <p>Represents a connection to the Ingenico ePayments platform server.</p>
 <dl class="method">
+<dt id="ingenico.connect.sdk.connection.Connection.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/connection.html#Connection.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.connection.Connection.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases any system resources associated with this object.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="ingenico.connect.sdk.connection.Connection.delete">
 <code class="descname">delete</code><span class="sig-paren">(</span><em>url</em>, <em>request_headers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/connection.html#Connection.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.connection.Connection.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send a DELETE request to the Ingenico ePayments platform and return the response.</p>
@@ -869,7 +839,7 @@ the HTTP request. This secret is used as input for the HMAC algorithm.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>url</strong> – The URI to call, including any necessary query parameters.</li>
-<li><strong>request_headers</strong> – An optional list of request headers.</li>
+<li><strong>request_headers</strong> – An optional sequence of request headers.</li>
 </ul>
 </td>
 </tr>
@@ -895,7 +865,7 @@ with the Ingenico ePayments platform</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>url</strong> – The URI to call, including any necessary query parameters.</li>
-<li><strong>request_headers</strong> – An optional list of request headers.</li>
+<li><strong>request_headers</strong> – An optional sequence of request headers.</li>
 </ul>
 </td>
 </tr>
@@ -921,7 +891,7 @@ with the Ingenico ePayments platform</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>url</strong> – The URI to call, including any necessary query parameters.</li>
-<li><strong>request_headers</strong> – An optional list of request headers.</li>
+<li><strong>request_headers</strong> – An optional sequence of request headers.</li>
 <li><strong>body</strong> – The optional body to send.</li>
 </ul>
 </td>
@@ -948,7 +918,7 @@ with the Ingenico ePayments platform</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>url</strong> – The URI to call, including any necessary query parameters.</li>
-<li><strong>request_headers</strong> – An optional list of request headers.</li>
+<li><strong>request_headers</strong> – An optional sequence of request headers.</li>
 <li><strong>body</strong> – The optional body to send.</li>
 </ul>
 </td>
@@ -1101,22 +1071,19 @@ with the Ingenico ePayments platform</p>
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_client_from_communicator">
 <em class="property">static </em><code class="descname">create_client_from_communicator</code><span class="sig-paren">(</span><em>communicator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_client_from_communicator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_client_from_communicator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Client based on the settings stored in the Communicator
-argument</p>
+<dd><p>Create a Client based on the settings stored in the Communicator argument</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_client_from_configuration">
 <em class="property">static </em><code class="descname">create_client_from_configuration</code><span class="sig-paren">(</span><em>communicator_configuration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_client_from_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_client_from_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Client based on the configuration stored in the
-CommunicatorConfiguration argument</p>
+<dd><p>Create a Client based on the configuration stored in the CommunicatorConfiguration argument</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_client_from_file">
 <em class="property">static </em><code class="descname">create_client_from_file</code><span class="sig-paren">(</span><em>configuration_file_name</em>, <em>api_key_id</em>, <em>secret_api_key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_client_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_client_from_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Client based on the configuration values in
-configuration_file_name, api_key_id and secret_api_key.</p>
+<dd><p>Creates a Client based on the configuration values in configuration_file_name, api_key_id and secret_api_key.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -1128,43 +1095,37 @@ configuration_file_name, api_key_id and secret_api_key.</p>
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_communicator_from_configuration">
 <em class="property">static </em><code class="descname">create_communicator_from_configuration</code><span class="sig-paren">(</span><em>communicator_configuration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_communicator_from_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_communicator_from_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Communicator based on the configuration stored in the
-CommunicatorConfiguration argument</p>
+<dd><p>Create a Communicator based on the configuration stored in the CommunicatorConfiguration argument</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_communicator_from_file">
 <em class="property">static </em><code class="descname">create_communicator_from_file</code><span class="sig-paren">(</span><em>configuration_file_name</em>, <em>api_key_id</em>, <em>secret_api_key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_communicator_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_communicator_from_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Communicator based on the configuration values in
-configuration_file_name, api_key_id and secret_api_key.</p>
+<dd><p>Creates a Communicator based on the configuration values in configuration_file_name, api_key_id and secret_api_key.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_communicator_from_session">
 <em class="property">static </em><code class="descname">create_communicator_from_session</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_communicator_from_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_communicator_from_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Communicator based on the settings stored in the Session
-argument</p>
+<dd><p>Create a Communicator based on the settings stored in the Session argument</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_configuration">
 <em class="property">static </em><code class="descname">create_configuration</code><span class="sig-paren">(</span><em>configuration_file_name</em>, <em>api_key_id</em>, <em>secret_api_key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a CommunicatorConfiguration based on the configuration
-values in configuration_file_name, api_key_id and secret_api_key.</p>
+<dd><p>Creates a CommunicatorConfiguration based on the configuration values in configuration_file_name, api_key_id and secret_api_key.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_session_from_configuration">
 <em class="property">static </em><code class="descname">create_session_from_configuration</code><span class="sig-paren">(</span><em>communicator_configuration</em>, <em>meta_data_provider=None</em>, <em>connection=None</em>, <em>authenticator=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_session_from_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_session_from_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Session based on the configuration stored in the
-CommunicatorConfiguration argument</p>
+<dd><p>Creates a Session based on the configuration stored in the CommunicatorConfiguration argument</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.factory.Factory.create_session_from_file">
 <em class="property">static </em><code class="descname">create_session_from_file</code><span class="sig-paren">(</span><em>configuration_file_name</em>, <em>api_key_id</em>, <em>secret_api_key</em>, <em>meta_data_provider=None</em>, <em>connection=None</em>, <em>authenticator=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/factory.html#Factory.create_session_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.factory.Factory.create_session_from_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Session based on the configuration values in
-configuration_file_name, api_id_key and secret_api_key.</p>
+<dd><p>Creates a Session based on the configuration values in configuration_file_name, api_id_key and secret_api_key.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1203,8 +1164,7 @@ idempotent request failed because the first request has not finished yet.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The request timestamp of the first idempotent request with the
-same key.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The request timestamp of the first idempotent request with the same key.</td>
 </tr>
 </tbody>
 </table>
@@ -1216,8 +1176,7 @@ same key.</td>
 <dt id="ingenico.connect.sdk.marshaller.Marshaller">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.marshaller.</code><code class="descname">Marshaller</code><a class="reference internal" href="_modules/ingenico/connect/sdk/marshaller.html#Marshaller"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.marshaller.Marshaller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Used to marshal and unmarshal Ingenico ePayments platform request and response
-objects to and from JSON.</p>
+<p>Used to marshal and unmarshal Ingenico ePayments platform request and response objects to and from JSON.</p>
 <dl class="method">
 <dt id="ingenico.connect.sdk.marshaller.Marshaller.marshal">
 <code class="descname">marshal</code><span class="sig-paren">(</span><em>request_object</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/marshaller.html#Marshaller.marshal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.marshaller.Marshaller.marshal" title="Permalink to this definition">¶</a></dt>
@@ -1248,8 +1207,7 @@ objects to and from JSON.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">MarshallerSyntaxException if the JSON is not a valid
-representation for an object of the given type</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">MarshallerSyntaxException if the JSON is not a valid representation for an object of the given type</p>
 </td>
 </tr>
 </tbody>
@@ -1351,8 +1309,8 @@ an automatically generated header X-GCS-ServerMetaInfo.</td>
 <em class="property">exception </em><code class="descclassname">ingenico.connect.sdk.not_found_exception.</code><code class="descname">NotFoundException</code><span class="sig-paren">(</span><em>exception</em>, <em>message=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/not_found_exception.html#NotFoundException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.not_found_exception.NotFoundException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.RuntimeError</span></code></p>
 <p>Indicates an exception that occurs when the requested resource is not found.
-In normal usage of the SDK, this exception should not occur, however it is
-possible. For example when path parameters are set with invalid values.</p>
+In normal usage of the SDK, this exception should not occur, however it is possible.
+For example when path parameters are set with invalid values.</p>
 </dd></dl>
 
 <span class="target" id="module-ingenico.connect.sdk.param_request"></span><dl class="class">
@@ -1499,8 +1457,7 @@ non-existing or removed object is trying to be accessed.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The header with the given name, or None if there was no such
-header.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The header with the given name, or None if there was no such header.</td>
 </tr>
 </tbody>
 </table>
@@ -1513,8 +1470,7 @@ header.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the header with the given name, or None if there
-was no such header.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the header with the given name, or None if there was no such header.</td>
 </tr>
 </tbody>
 </table>
@@ -1566,8 +1522,7 @@ indicates an error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The raw response body that was returned by the Ingenico ePayments
-platform.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The raw response body that was returned by the Ingenico ePayments platform.</td>
 </tr>
 </tbody>
 </table>
@@ -1580,8 +1535,7 @@ platform.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The header with the given name, or None if there was no such
-header.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The header with the given name, or None if there was no such header.</td>
 </tr>
 </tbody>
 </table>
@@ -1594,8 +1548,7 @@ header.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value header with the given name, or None if there was no
-such header.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value header with the given name, or None if there was no such header.</td>
 </tr>
 </tbody>
 </table>
@@ -1608,8 +1561,7 @@ such header.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The headers that were returned by the Ingenico ePayments platform.
-Never None.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The headers that were returned by the Ingenico ePayments platform. Never None.</td>
 </tr>
 </tbody>
 </table>
@@ -1622,8 +1574,7 @@ Never None.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The HTTP status code that was returned by the Ingenico ePayments
-platform.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The HTTP status code that was returned by the Ingenico ePayments platform.</td>
 </tr>
 </tbody>
 </table>
@@ -1638,8 +1589,7 @@ platform.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the filename parameter of the Content-Disposition
-header, or None if there was no such header or parameter.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the filename parameter of the Content-Disposition header, or None if there was no such header or parameter.</td>
 </tr>
 </tbody>
 </table>
@@ -1652,8 +1602,7 @@ header, or None if there was no such header or parameter.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The header with the given name as a tuple with the name and
-value, or None if there was no such header.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The header with the given name as a tuple with the name and value, or None if there was no such header.</td>
 </tr>
 </tbody>
 </table>
@@ -1666,8 +1615,7 @@ value, or None if there was no such header.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the header with the given name, or None if there
-was no such header.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the header with the given name, or None if there was no such header.</td>
 </tr>
 </tbody>
 </table>
@@ -1693,8 +1641,7 @@ was no such header.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Ingenico ePayments platform API endpoint URI. This URI’s path
-will be None or empty.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Ingenico ePayments platform API endpoint URI. This URI’s path will be None or empty.</td>
 </tr>
 </tbody>
 </table>
@@ -1805,8 +1752,7 @@ The default implementation supports strings, file descriptors and io.BytesIO obj
 <dt id="ingenico.connect.sdk.validation_exception.ValidationException">
 <em class="property">exception </em><code class="descclassname">ingenico.connect.sdk.validation_exception.</code><code class="descname">ValidationException</code><span class="sig-paren">(</span><em>status_code</em>, <em>response_body</em>, <em>error_id</em>, <em>errors</em>, <em>message='the Ingenico ePayments platform returned an incorrect request error response'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/validation_exception.html#ValidationException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.validation_exception.ValidationException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.api_exception.ApiException" title="ingenico.connect.sdk.api_exception.ApiException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.api_exception.ApiException</span></code></a></p>
-<p>Represents an error response from the Ingenico ePayments platform when validation
-of requests failed.</p>
+<p>Represents an error response from the Ingenico ePayments platform when validation of requests failed.</p>
 </dd></dl>
 
 <span class="target" id="module-ingenico.connect.sdk.defaultimpl.authorization_type"></span><dl class="class">
@@ -1894,24 +1840,19 @@ used as input for the HMAC algorithm.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>connect_timeout</strong> – timeout in seconds before a pending connection is
-dropped</li>
-<li><strong>socket_timeout</strong> – timeout in seconds before dropping an established
-connection. This is the time the server is allowed for a response</li>
-<li><strong>max_connections</strong> – the maximum number of connections in the connection
-pool</li>
-<li><strong>proxy_configuration</strong> – ProxyConfiguration object that contains data
-about proxy settings if present.
+<li><strong>connect_timeout</strong> – timeout in seconds before a pending connection is dropped</li>
+<li><strong>socket_timeout</strong> – timeout in seconds before dropping an established connection.
+This is the time the server is allowed for a response</li>
+<li><strong>max_connections</strong> – the maximum number of connections in the connection pool</li>
+<li><strong>proxy_configuration</strong> – ProxyConfiguration object that contains data about proxy settings if present.
 It should be writeable as string and have a scheme attribute.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Use the methods get, delete, post and put to perform the corresponding HTTP
-request.
-Alternatively you can use request with the request method as the first
-parameter.</p>
+<p>Use the methods get, delete, post and put to perform the corresponding HTTP request.
+Alternatively you can use request with the request method as the first parameter.</p>
 <p>URI, headers and body should be given on a per-request basis.</p>
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.defaultimpl.default_connection.DefaultConnection.__abstractmethods__">
@@ -1969,8 +1910,7 @@ parameter.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>url</strong> – the url to the server, given as a parsed url</li>
-<li><strong>request_headers</strong> – a list containing RequestHeader objects
-representing the request headers</li>
+<li><strong>request_headers</strong> – a sequence containing RequestHeader objects representing the request headers</li>
 </ul>
 </td>
 </tr>
@@ -2008,8 +1948,7 @@ representing the request headers</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>url</strong> – the url to the server, given as a parsed url</li>
-<li><strong>request_headers</strong> – a list containing RequestHeader objects
-representing the request headers</li>
+<li><strong>request_headers</strong> – a sequence containing RequestHeader objects representing the request headers</li>
 </ul>
 </td>
 </tr>
@@ -2027,8 +1966,7 @@ representing the request headers</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>url</strong> – the url to the server, given as a parsed url</li>
-<li><strong>request_headers</strong> – a list containing RequestHeader objects
-representing the request headers</li>
+<li><strong>request_headers</strong> – a sequence containing RequestHeader objects representing the request headers</li>
 <li><strong>body</strong> – the request body</li>
 </ul>
 </td>
@@ -2047,8 +1985,7 @@ representing the request headers</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>url</strong> – the url to the server, given as a parsed url</li>
-<li><strong>request_headers</strong> – a list containing RequestHeader objects
-representing the request headers</li>
+<li><strong>request_headers</strong> – a sequence containing RequestHeader objects representing the request headers</li>
 <li><strong>body</strong> – the request body</li>
 </ul>
 </td>
@@ -2117,8 +2054,7 @@ representing the request headers</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">MarshallerSyntaxException if the JSON is not a valid
-representation for an object of the given type</p>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body"><p class="first last">MarshallerSyntaxException if the JSON is not a valid representation for an object of the given type</p>
 </td>
 </tr>
 </tbody>
@@ -8274,6 +8210,12 @@ representation for an object of the given type</p>
 <dt id="ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput">
 <em class="property">class </em><code class="descclassname">ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.</code><code class="descname">AbstractCardPaymentMethodSpecificInput</code><a class="reference internal" href="_modules/ingenico/connect/sdk/domain/payment/definitions/abstract_card_payment_method_specific_input.html#AbstractCardPaymentMethodSpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ingenico.connect.sdk.domain.definitions.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput" title="ingenico.connect.sdk.domain.definitions.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">ingenico.connect.sdk.domain.definitions.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput</span></code></a></p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.acquirer_promotion_code">
+<code class="descname">acquirer_promotion_code</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.acquirer_promotion_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.authorization_mode">
 <code class="descname">authorization_mode</code><a class="headerlink" href="#ingenico.connect.sdk.domain.payment.definitions.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.authorization_mode" title="Permalink to this definition">¶</a></dt>
@@ -22793,7 +22735,7 @@ or the service that you’re trying to reach is temporary unavailable (HTTP stat
 <dl class="method">
 <dt id="ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient.get_installments_info">
 <code class="descname">get_installments_info</code><span class="sig-paren">(</span><em>body</em>, <em>context=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/merchant/installments/installments_client.html#InstallmentsClient.get_installments_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.merchant.installments.installments_client.InstallmentsClient.get_installments_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource /{merchantId}/installments/getInstallmentsInfo - Get Installment Info</p>
+<dd><p>Resource /{merchantId}/installments/getInstallmentsInfo - Get installment information</p>
 <p>See also <a class="reference external" href="https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/installments/getInstallmentsInfo.html">https://epayments-api.developer-ingenico.com/s2sapi/v1/en_US/python/installments/getInstallmentsInfo.html</a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -26244,8 +26186,7 @@ specified at application startup.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The secret key for the given key ID. Never None.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">SecretKeyNotAvailableException: If the secret key for the given
-key ID is not available.</td>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">SecretKeyNotAvailableException: If the secret key for the given key ID is not available.</td>
 </tr>
 </tbody>
 </table>
@@ -26291,8 +26232,7 @@ key ID is not available.</td>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The secret key for the given key ID. Never None.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">SecretKeyNotAvailableException: If the secret key for the given
-key ID is not available.</td>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">SecretKeyNotAvailableException: If the secret key for the given key ID is not available.</td>
 </tr>
 </tbody>
 </table>
@@ -26305,6 +26245,31 @@ key ID is not available.</td>
 <em class="property">exception </em><code class="descclassname">ingenico.connect.sdk.webhooks.signature_validation_exception.</code><code class="descname">SignatureValidationException</code><span class="sig-paren">(</span><em>param</em>, <em>cause=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/webhooks/signature_validation_exception.html#SignatureValidationException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.webhooks.signature_validation_exception.SignatureValidationException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.RuntimeError</span></code></p>
 <p>Represents an error while validating webhooks signatures.</p>
+</dd></dl>
+
+<span class="target" id="module-ingenico.connect.sdk.webhooks.signature_validator"></span><dl class="class">
+<dt id="ingenico.connect.sdk.webhooks.signature_validator.SignatureValidator">
+<em class="property">class </em><code class="descclassname">ingenico.connect.sdk.webhooks.signature_validator.</code><code class="descname">SignatureValidator</code><span class="sig-paren">(</span><em>secret_key_store</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/webhooks/signature_validator.html#SignatureValidator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.webhooks.signature_validator.SignatureValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validator for webhooks signatures.</p>
+<dl class="attribute">
+<dt id="ingenico.connect.sdk.webhooks.signature_validator.SignatureValidator.secret_key_store">
+<code class="descname">secret_key_store</code><a class="headerlink" href="#ingenico.connect.sdk.webhooks.signature_validator.SignatureValidator.secret_key_store" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingenico.connect.sdk.webhooks.signature_validator.SignatureValidator.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>body</em>, <em>request_headers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/webhooks/signature_validator.html#SignatureValidator.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.webhooks.signature_validator.SignatureValidator.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates the given body using the given request headers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">SignatureValidationException: If the body could not be validated successfully.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 <span class="target" id="module-ingenico.connect.sdk.webhooks.web_hooks"></span><dl class="class">
@@ -26331,7 +26296,8 @@ key ID is not available.</td>
 <dl class="staticmethod">
 <dt id="ingenico.connect.sdk.webhooks.web_hooks_helper.WebhooksHelper.are_equal_signatures">
 <em class="property">static </em><code class="descname">are_equal_signatures</code><span class="sig-paren">(</span><em>signature</em>, <em>expected_signature</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ingenico/connect/sdk/webhooks/web_hooks_helper.html#WebhooksHelper.are_equal_signatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ingenico.connect.sdk.webhooks.web_hooks_helper.WebhooksHelper.are_equal_signatures" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Deprecated; use hmac.compare_digest instead</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="ingenico.connect.sdk.webhooks.web_hooks_helper.WebhooksHelper.marshaller">

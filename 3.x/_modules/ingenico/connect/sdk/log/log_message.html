@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.log.log_message &#8212; connect-sdk-python2 3.45.0 documentation</title>
+    <title>ingenico.connect.sdk.log.log_message &#8212; connect-sdk-python2 3.46.0 documentation</title>
     <link rel="stylesheet" href="../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
@@ -105,7 +105,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__content_type</span> <span class="o">=</span> <span class="n">content_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__body</span> <span class="o">=</span> <span class="s2">&quot;&lt;binary content&gt;&quot;</span></div>
 
-    <span class="k">def</span> <span class="nf">__is_binary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content_type</span><span class="p">):</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__is_binary</span><span class="p">(</span><span class="n">content_type</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">content_type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
         <span class="n">content_type</span> <span class="o">=</span> <span class="n">content_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.log.sys_out_communicator_logger &#8212; connect-sdk-python2 3.45.0 documentation</title>
+    <title>ingenico.connect.sdk.log.sys_out_communicator_logger &#8212; connect-sdk-python2 3.46.0 documentation</title>
     <link rel="stylesheet" href="../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
@@ -38,8 +38,7 @@
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Lock</span>
 
-<span class="kn">from</span> <span class="nn">ingenico.connect.sdk.log.python_communicator_logger</span> <span class="kn">import</span> \
-    <span class="n">CommunicatorLogger</span>
+<span class="kn">from</span> <span class="nn">ingenico.connect.sdk.log.python_communicator_logger</span> <span class="kn">import</span> <span class="n">CommunicatorLogger</span>
 
 
 <div class="viewcode-block" id="SysOutCommunicatorLogger"><a class="viewcode-back" href="../../../../../index.html#ingenico.connect.sdk.log.sys_out_communicator_logger.SysOutCommunicatorLogger">[docs]</a><span class="k">class</span> <span class="nc">SysOutCommunicatorLogger</span><span class="p">(</span><span class="n">CommunicatorLogger</span><span class="p">):</span>
@@ -68,7 +67,8 @@
         <span class="k">if</span> <span class="n">thrown</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">thrown</span><span class="p">))</span></div>
 
-    <span class="k">def</span> <span class="nf">__get_date_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__get_date_prefix</span><span class="p">():</span>
         <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S &quot;</span><span class="p">)</span></div>
 
 
