@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  push:
+    tags: ['[0-9]+.[0-9]+*']
+
+env:
+  SDK_VERSION: ${{ github.ref_name }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # setup-python no longer supports Python 2.7; use a Docker image instead
+    container:
+      image: python:2.7.18-buster
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Install Twine and dependencies
+        run: pip install twine requests==2.* requests-toolbelt==0.*
+      - name: Build
+        run: python setup.py sdist --formats zip --dist-dir .
+      - name: Verify
+        run: twine check "connect-sdk-python2-${SDK_VERSION}.zip"
+      - name: Deploy
+        run: twine upload --username "${PYPI_USERNAME}" --password "${PYPI_PASSWORD}" "connect-sdk-python2-${SDK_VERSION}.zip"
+        env:
+          PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
