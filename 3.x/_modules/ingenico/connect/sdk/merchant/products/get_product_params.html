@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ingenico.connect.sdk.merchant.products.get_product_params &#8212; connect-sdk-python2 3.46.0 documentation</title>
+    <title>ingenico.connect.sdk.merchant.products.get_product_params &#8212; connect-sdk-python2 3.47.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -54,6 +54,7 @@
     <span class="n">__locale</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__amount</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__is_recurring</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__is_installments</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__hide</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__force_basic_flow</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -128,6 +129,24 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__is_recurring</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_installments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | This allows you to filter payment products based on their support for installments or not</span>
+<span class="sd">        </span>
+<span class="sd">        * true</span>
+<span class="sd">        * false</span>
+<span class="sd">        </span>
+<span class="sd">        | If this is omitted all payment products are returned.</span>
+<span class="sd">        </span>
+<span class="sd">        Type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_installments</span>
+
+    <span class="nd">@is_installments</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">is_installments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__is_installments</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">hide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Allows you to hide elements from the response, reducing the amount of data that needs to be returned to your client. Possible options are:</span>
@@ -180,6 +199,8 @@
             <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RequestParam</span><span class="p">(</span><span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">amount</span><span class="p">)))</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_recurring</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RequestParam</span><span class="p">(</span><span class="s2">&quot;isRecurring&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_recurring</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_installments</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RequestParam</span><span class="p">(</span><span class="s2">&quot;isInstallments&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_installments</span><span class="p">)))</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hide</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">hide_element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hide</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">hide_element</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
